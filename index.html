@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icons8-apple-64.ico" type="image/vnd.microsoft.ico"/>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">    
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/ipad.css">
+    <link rel="stylesheet" href="./css/ipadPro.css">
+    <link rel="stylesheet" href="./css/phone.css">
+    <link rel="stylesheet" href="./css/smallPhone.css">
+    <link rel="stylesheet" href="./css/supperSmall.css">
+    <title>Document</title>
+    <style>
+        html{
+          scroll-behavior: smooth;
+        }
+      </style>
+</head>
+<body>
+    <div class="section">
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <!-- <video autoplay loop muted height='1000' >
+                <source src="./img/v5.mp4" type="video/mp4">
+            </video> -->
+            <img src="./img/bg-m.jpeg" alt="">
+        </div>
+    </div>
+    <div class="bg"></div>
+    <div class="navbar">
+        <div class="nav_brand">
+            <a href="">
+                <svg width="32" height="37" viewBox="0 0 32 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path" d="M21 7.48624L20.8357 6.62181C20.5984 5.37394 20.0766 4.19758 19.3108 3.18416L19.0328 2.81633C18.8946 2.6334 18.7389 2.46435 18.5679 2.31158L18.1181 1.90971C17.4852 1.34414 16.6046 1.14626 15.7905 1.38664V1.38664C15.2318 1.5516 14.7501 1.91013 14.4318 2.39797L13.9401 3.15132C13.6487 3.5979 13.4321 4.0891 13.2991 4.6055L12.375 8.19266L12 11.4679V15" stroke="white"/>
+                    <path class="path" d="M20 29.2385L19.6304 31.329C19.4711 32.2303 19.2005 33.1084 18.825 33.943V33.943C18.7704 34.0644 18.704 34.1801 18.6269 34.2886L18.3619 34.6611L18.1743 34.8767C17.9713 35.1099 17.723 35.2992 17.4445 35.4333V35.4333C16.7152 35.7842 15.8543 35.7213 15.1838 35.2681L14.8022 35.0102C14.4614 34.7798 14.1701 34.4834 13.9458 34.1384L13.3714 33.2552L12.8576 32.106C12.6418 31.6234 12.4682 31.1231 12.3386 30.6106V30.6106C12.2147 30.1207 12.1314 29.6214 12.0897 29.1178L12 28.0335V24.1506V20" stroke="white"/>
+                    <path class="path" d="M9.03922 26.847L8.08121 27.2917C7.07621 27.7583 5.98153 28 4.87351 28H4.47154C4.16253 28 3.85453 27.9649 3.55343 27.8955L2.56105 27.6667C2.06654 27.5526 1.64347 27.2345 1.39667 26.791V26.791C1.14464 26.3382 1.10077 25.7985 1.27637 25.3109L1.5506 24.5494C1.70498 24.1206 1.93993 23.7254 2.24278 23.385L4.00654 21.4021V21.4021C5.69251 19.8345 7.51723 18.3894 9.43137 17.1103V17.1103L12.5686 15.3808L15.9673 13.5872L20.2157 11.7295L23.8105 10.6406L25.8761 10.1805C26.4146 10.0605 26.9646 10 27.5163 10H28.331C28.6698 10 29.006 10.0591 29.3245 10.1747L30.037 10.4334C30.3987 10.5646 30.6832 10.8499 30.8136 11.2119V11.2119C30.9327 11.5427 30.9123 11.9077 30.7569 12.223L30.3177 13.1147C30.1634 13.4281 29.9646 13.7175 29.7277 13.9742L28.8431 14.9324L27.0784 16.79L24.8562 18.6477" stroke="white"/>
+                    <path class="path" d="M9 9.62162L6.71832 8.70713C6.21784 8.50653 5.69766 8.35909 5.16636 8.26724L4.24317 8.10762C3.8324 8.0366 3.41154 8.04918 3.00575 8.14459L2.67305 8.22282C2.17179 8.34069 1.72878 8.63299 1.42323 9.04748V9.04748C1.14832 9.42042 1 9.87158 1 10.3349V10.581C1 11.2704 1.24406 11.9376 1.68894 12.4642L2.65517 13.6081L4.44828 15.4324L6.44828 17.0541L7.68966 18" stroke="white"/>
+                    <path class="path" d="M19.4685 15L21.991 16.931L23.9369 18.4483L26.6757 20.5862L28.9102 22.7244C29.5757 23.3612 30.1042 24.1271 30.4635 24.9752L30.8166 25.8084C30.9376 26.0941 31 26.4013 31 26.7116V26.8369C31 27.541 30.6445 28.1975 30.0548 28.5822V28.5822C29.6413 28.8519 29.1456 28.9662 28.6558 28.9045L27.1591 28.716C26.8373 28.6755 26.5192 28.6098 26.2077 28.5195L24.2973 27.9655L21.5586 27.069L18.6757 25.8276L16.6216 24.6552L15 23.6897L17.6667 22.1724L19.9009 20.931L21.991 19.8276" stroke="white"/>
+                </svg>
+            </a>
+        </div>
+        <div class="menu_btn">
+            <div class="btn">
+                <span class="btn_1"></span>
+                <span class="btn_2"></span>
+                <span class="btn_3"></span>
+            </div>
+        </div>
+    </div>
+    <!-- <div style="height:400px;width:100%">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quod soluta natus. Magni tempora animi illo ea accusamus ex deserunt odio facere deleniti molestiae qui eaque in illum praesentium sunt iste accusantium nobis repellat aspernatur alias, architecto consectetur voluptate dolore! Saepe, enim rem nam dolorem tempore blanditiis perspiciatis repellat architecto.</p>
+    </div> -->
+    <!-- /////////// -->
+    <div class="load">
+        <div class="load_left"></div>
+        <div class="load_right"></div>
+    </div>
+    <div class="menu">
+        <ul class="menu_tag">
+            <li class="menu_items item_1">
+                <a href="#home" class="menu_link add"><img src="./img/home.png"/></a>
+                <span>Home</span>
+            </li>
+            <li class="menu_items item_2">
+                <a href="#about" class="menu_link"><img src="./img/about.png"/></a>
+                <span>About</span>
+            </li>
+            <li class="menu_items item_3">
+                <a href="#education" class="menu_link"><img src="./img/edu.png"/></a>
+                <span>Education</span>
+            </li>
+            <li class="menu_items item_4">
+                <a href="#skill" class="menu_link"><img src="./img/skill.png"/></a>
+                <span>Skill</span>
+            </li>
+            <li class="menu_items item_5">
+                <a href="#portfolio" class="menu_link"><img src="./img/portfolio.png"/></a>
+                <span>Portfolio</span>
+            </li>
+            <li class="menu_items item_6">
+                <a href="#contact" class="menu_link"><img src="./img/contact.png"/></a>
+                <span>Contact</span>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div id="home" >
+            <div class="home_name">
+                <div class="name">NGUYEN TIEP THANG</div>
+            </div>
+            <div class='home_1'>
+                <ul class="home_contact">
+                    <li class="home_items">
+                        <a href="" class="home_link "><img src="./img/tw-c.png"/></a>
+                    </li>
+                    <li class="home_items">
+                        <a href="" class="home_link "><img src="./img/fa-c.png"/></a>
+                    </li>
+                    <li class="home_items">
+                        <a href="" class="home_link "><img src="./img/ist-c.png"/></a>
+                    </li>
+                    <li class="home_items">
+                        <a href="" class="home_link "><img src="./img/linked-c.png"/></a>
+                    </li>
+                    <li class="home_items">
+                        <a href="" class="home_link "><img src="./img/git-c.png"/></a>
+                    </li>
+                </ul>
+                <div class="home_item_border"></div>
+            </div>
+        
+
+
+        </div>
+        <div id="about">
+            <div class="about_wrap">
+                <div class="about_title">
+                    <p>ABOUT</p>
+                </div>
+                <div class="about_title_phone">
+                    <span>ABOUT</span>
+                </div>
+                <div class="about_image">
+                    <img src="./img/thang.jpg" alt="">
+                </div>
+                <div class="about_content">
+                    <ul class="detail">
+                        <li class="detail_items">
+                            <p class="title_bold">Name :</p>
+                            <p class="title_info">NGUYEN TIEP THANG</p>
+                        </li>
+                        <li class="detail_items">
+                            <p class="title_bold">Birthday :</p>
+                            <p class="title_info">1994/10/02</p>
+                        </li>
+                        <li class="detail_items">
+                            <p class="title_bold">City :</p>
+                            <p class="title_info">東京豊島区巣鴨</p>
+                        </li>
+                        <li class="detail_items">
+                            <p class="title_bold">Website :</p>
+                            <p class="title_info">nguyenthangJRS.com</p>
+                        </li>
+                        <li class="detail_items">
+                            <p class="title_bold">Phone :</p>
+                            <p class="title_info">+8190-6315-5056</p>
+                        </li>
+                        <li class="detail_items">
+                            <p class="title_bold">Email :</p>
+                            <p class="title_info">nguyenthangJRS@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="education" >
+            <div class="edu_wrap">
+                <div class="work_title">
+                    <p>EDUCATION</p>
+                </div>
+                <div class="edu_title_phone">
+                    <span>EDUCATION</span>
+                </div>
+                <div class="edu_image">
+                    <img src="./img/book.jpeg" alt="">
+                </div>
+                <div class="edu_content">
+                    <ul class="edu_list">
+                        <li class="edu_items">
+                            <p>2016</p>
+                            <p>ベトナムの Academy Of Finance で卒業しました。</p>
+                        </li>
+                        <li class="edu_items">
+                            <p>2017</p>
+                            <p>AKIRA 日本語センターで日本語を勉強しました。</p>
+                        </li>
+                        <li class="edu_items">
+                            <p>2018</p>
+                            <p>JIN 東京日本語学校入学しました。</p>
+                        </li>
+                        <li class="edu_items">
+                            <p>2020</p>
+                            <p>JIN東京日本語学校で卒業しました。</p>
+                        </li>
+                        <li class="edu_items">
+                            <p>2021</p>
+                            <p>駿台電子情報＆ビジネス専門学校で勉強しています。</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            </div>
+        </div>
+
+        <div id="skill">
+            <div class="skill_wrap">
+                <div class="skill_title">
+                    <!-- <p>SKILL</p> -->
+                </div>
+                <div class="skill_img">
+                    <img src="./img/skill-text.jpeg" alt="">
+                </div>
+                <div class="skill_title_phone">
+                    <span>SKILL</span>
+                </div>
+                <div class="skill_content">
+                    <ul class="skill_list">
+                        <li class="skill_items">
+                            <p>HTML</p>
+                            <span class="skill_pacent">
+                                <span class="span-1"></span>
+                            </span>
+                        </li>
+                        <li class="skill_items">
+                            <p>CSS</p>
+                            <span class="skill_pacent">
+                                <span class="span-2"></span>
+                            </span>
+                        </li>
+                        <li class="skill_items">
+                            <p>JAVASCRIPT</p>
+                            <span class="skill_pacent">
+                                <span class="span-3"></span>
+                            </span>
+                        </li>
+                        <li class="skill_items">
+                            <p>SCSS</p>
+                            <span class="skill_pacent">
+                                <span class="span-4"></span>
+                            </span>
+                        </li>
+                        <li class="skill_items">
+                            <p>REACT JS</p>
+                            <span class="skill_pacent">
+                                <span class="span-5"></span>
+                            </span>
+                        </li>
+                        <li class="skill_items">
+                            <p>LINUX</p>
+                            <span class="skill_pacent">
+                                <span class="span-6"></span>
+                            </span>
+                        </li>
+                        <li class="skill_items">
+                            <p>MY SQL</p>
+                            <span class="skill_pacent">
+                                <span class="span-7"></span>
+                            </span>
+                        </li>
+                        <li class="skill_items">
+                            <p>JAVA</p>
+                            <span class="skill_pacent">
+                                <span class="span-8"></span>
+                            </span>
+                        </li>
+                    </ul>
+                    <span class="hyaku">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="port_wrap">
+                <div class="port_title"></div>
+                <div class="title_name">
+                    <span>PORTFOLIO</span>
+                </div>
+                <div class="port_img">
+                    <img src="./img/bg1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <ul class="port_list">
+                        <li class="port_items">
+                            <img src="./img/item1.jpeg" alt="">
+                            <div class="items_content">
+                                <p>Caffe Dekiru</p>
+                                <p>2020/11</p>
+                                <a href="https://caffee-web.herokuapp.com" > Get Start</a>
+                            </div>
+                        </li>
+                        <li class="port_items">
+                            <img src="./img/item2.jpg" alt="">
+                            <div class="items_content">
+                                <p>portfolio</p>
+                                <p>2020/06</p>
+                                <a href="https://nguyenthang.herokuapp.com/?fbclid=IwAR2CfPXinfIyzkiUXSG25uSY24IOqFEGxBJsPxk2rWleKvR95m3Vj9EvczE" > Get Start</a>
+                            </div>
+                        </li>
+                        <li class="port_items">
+                            <img src="./img/item3.jpeg" alt="">
+                            <div class="items_content">
+                                <p>Todo List (React Js)</p>
+                                <p>2020/10</p>
+                                <a href="https://github.com/nguyenthangJRS/TodoApp-by-React-JS" > Get Start</a>
+                            </div>
+                        </li>
+                        <li class="port_items">
+                            <img src="./img/item4.jpeg" alt="">
+                            <div class="items_content">
+                                <p>Kujira Caffee</p>
+                                <p>2020/09</p>
+                                <a href="https://github.com/nguyenthangJRS/Portfolio-heroku" > Get Start</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div id="contact">
+            <div class="span">
+                <span>Contact</span>
+                <span class="span_1 "  ></span>
+                <span  class="span_2 "></span>
+            </div>
+            <div class="contact_area">
+                <ul class="local_adress">
+                    <li class="adress">
+                        <div class="adress_icon"><img src="./img/local.png"/></div>
+                        <div class="adress_info">
+                            <p>Location :</p>
+                            <span>東京都豊島区巣鴨 4-19-8</span>
+                        </div>
+                    </li>
+                    <li class="adress">
+                        <div class="adress_icon"><img src="./img/email.png"/></div>
+                        <div class="adress_info">
+                            <p>Email :</p>
+                            <span>nguyenthangJRS@gmail.com</span>
+                        </div>
+                    </li> <li class="adress">
+                        <div class="adress_icon"><img src="./img/phone.png"/></div>
+                        <div class="adress_info">
+                            <p>Call :</p>
+                            <span>+81-90-6315-5056</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="local_contact">
+                    <form action="">
+                        <input type="text" name ="name"placeholder='Your Name'>
+                        <input type="text" name ="email"placeholder='Your Email'>
+                        <input type="text" name ="subject"placeholder='Subject'>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button type="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_title">NGUYEN TIEP THANG</div>
+        <!-- <div class="footer_des">Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</div> -->
+        <ul class="footer_contact">
+            <li class="ft_list">
+                <a href="" class="ft_link "><img src="./img/twitter-icon.png" alt=""></a>
+            </li>
+            <li class="ft_list">
+                <a href="" class="ft_link "><img src="./img/fb-icon.png" alt=""></a>
+            </li>
+            <li class="ft_list">
+                <a href="" class="ft_link "><img src="./img/instagram-icon.png" alt=""></a>
+            </li>
+            <li class="ft_list">
+                <a href="" class="ft_link "><img src="./img/github-icon.png" alt=""></a>
+            </li>
+            <li class="ft_list">
+                <a href="" class="ft_link "><img src="./img/skype-icon.png" alt=""></a>
+            </li>
+        </ul>
+        <span>@Copyright MyResume. All Rights Reserved</span>
+        <span>Designed by HTML,SCSS,JAVASCRIPT</span>
+    </footer>
+
+    <script src="./js/portfolio.js"></script>
+    <script src="./js/ipad.js"></script>
+    <!-- <script src="./js/particles.js"></script> -->
+    <!-- <script src="./js/app.js"></script> -->
+    
+</body>
+</html>
