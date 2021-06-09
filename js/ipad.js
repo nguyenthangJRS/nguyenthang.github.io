@@ -1,6 +1,6 @@
 console.log(window.innerWidth)
 
-if(window.innerWidth >=1024 && window.innerWidth <=1500){
+if(window.innerWidth >=1024 && window.innerWidth <1500){
     window.onscroll = () =>{
         let scroll = window.scrollY;
         // console.log(scroll)
