@@ -1,6 +1,6 @@
 console.log(window.innerWidth)
 
-if(window.innerWidth >=1024 && window.innerWidth <=1500){
+if(window.innerWidth >=1024 && window.innerWidth <1500){
     window.onscroll = () =>{
         let scroll = window.scrollY;
         // console.log(scroll)
@@ -52,7 +52,7 @@ if(window.innerWidth >=1024 && window.innerWidth <=1500){
             title_name.style.animation = `none`;
         }
         else{
-            title_name.style.animation = ` show_port_1 2s ease-in-out 2s forwards`;
+            title_name.style.animation = ` show_port 2s ease-in-out 2s forwards`;
             port_img.style.animation = `port_img 1.3s ease-in-out 0.3s forwards`;
             port_title.style.animation = `port_title 1.3s ease-in-out 0.5s forwards`;
             for(let i = 0;i<port_items.length;i++){

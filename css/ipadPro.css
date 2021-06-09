@@ -138,7 +138,7 @@
     cursor: pointer;
   }
   html body main #about {
-    height: 62vh;
+    height: 86vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -189,7 +189,7 @@
     margin: 23px 6px;
   }
   html body main #education {
-    height: 55vh;
+    height: 72vh;
   }
   html body main #education .edu_wrap {
     display: -webkit-box;
@@ -204,7 +204,7 @@
   }
   html body main #education .edu_wrap .work_title {
     width: 325px;
-    height: 42vh;
+    height: 46vh;
     margin-right: 50px;
   }
   html body main #education .edu_wrap .work_title p {
@@ -220,7 +220,7 @@
             box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     width: 219px;
-    height: 16vh;
+    height: 21vh;
   }
   html body main #education .edu_wrap .edu_content {
     margin-left: 20px;
@@ -231,7 +231,7 @@
     margin: 30px 5px;
   }
   html body main #skill {
-    height: 71vh;
+    height: 100vh;
   }
   html body main #skill .skill_wrap {
     background-image: url(../img/skill0.jpeg);
@@ -308,8 +308,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 300px;
-    height: 15vh;
+    width: 214px;
+    height: 17vh;
     border-radius: 100%;
   }
   html body main #portfolio .port_wrap .port_title img {
@@ -376,7 +376,6 @@
             backdrop-filter: blur(10px);
     -webkit-box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
             box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
-    min-width: unset;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content p {
     color: black;
@@ -387,7 +386,7 @@
     border-radius: 6px;
   }
   html body main #contact {
-    height: 50vh;
+    height: 66vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

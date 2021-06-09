@@ -79,7 +79,7 @@
   }
   html body main #home .home_name {
     top: 40%;
-    left: 18%;
+    left: 24%;
     z-index: 3;
     padding: 15px;
   }
@@ -109,7 +109,7 @@
     cursor: pointer;
   }
   html body main #about {
-    height: 62vh;
+    height: 88vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -154,7 +154,7 @@
     margin: 23px 6px;
   }
   html body main #education {
-    height: 55vh;
+    height: 65vh;
   }
   html body main #education .edu_wrap {
     display: -webkit-box;
@@ -193,11 +193,11 @@
     margin-right: 55px;
   }
   html body main #education .edu_wrap .edu_content .edu_list .edu_items p {
-    font-size: 13px;
+    font-size: 18px;
     margin: 30px 5px;
   }
   html body main #skill {
-    height: 86vh;
+    height: 96vh;
   }
   html body main #skill .skill_wrap {
     background-image: url(../img/skill0.jpeg);
@@ -299,6 +299,7 @@
             align-items: center;
     border-left: 7px solid #55efc4;
     border-right: 7px solid #55efc4;
+    left: 66px;
   }
   html body main #portfolio .port_wrap .title_name span {
     font-size: 40px;
@@ -330,7 +331,7 @@
     display: flex;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items img {
-    width: 190px;
+    width: 290px;
     height: 190px;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content {
@@ -339,7 +340,6 @@
             backdrop-filter: blur(10px);
     -webkit-box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
             box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
-    min-width: unset;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content p {
     color: black;
@@ -350,7 +350,7 @@
     border-radius: 6px;
   }
   html body main #contact {
-    height: 50vh;
+    height: 68vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

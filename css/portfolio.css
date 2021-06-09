@@ -1718,8 +1718,8 @@ html body footer .footer_contact .ft_list .ft_link img {
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(-90deg) translateY(0);
-            transform: rotate(-90deg) translateY(0);
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
     opacity: 1;
   }
 }
@@ -1731,8 +1731,8 @@ html body footer .footer_contact .ft_list .ft_link img {
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(-90deg) translateY(0);
-            transform: rotate(-90deg) translateY(0);
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
     opacity: 1;
   }
 }

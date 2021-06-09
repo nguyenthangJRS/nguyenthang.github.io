@@ -118,7 +118,7 @@
                     @extend #def;
                     .home_name{
                         top: 40%;
-                        left: 18%;
+                        left: 24%;
                         z-index: 3;
                         padding: 15px;
                         .name{
@@ -155,7 +155,7 @@
     
     ///////////////////////////////////////////////////////////////////////
                 #about{
-                    height: 62vh;
+                    height: 88vh;
                     @include flex(space-around);
                     .about_wrap{
                         margin-left: 0;
@@ -199,7 +199,7 @@
                 }
                 #education{
                     @extend #def;
-                    height: 55vh;
+                    height: 65vh;
                     .edu_wrap{
                         @include flex(space-between);
                         .work_title{
@@ -228,7 +228,7 @@
                             .edu_list{
                                 .edu_items{
                                     p{
-                                        font-size: 13px;
+                                        font-size: 18px;
                                         margin: 30px 5px;
                                     }
                                 }
@@ -239,7 +239,7 @@
     
     /////////////////////////////////////////////////////////////////////
                 #skill{
-                    height: 86vh;
+                    height: 96vh;
                     .skill_wrap{
                         background-image: url(../img/skill0.jpeg);
                         @include img();
@@ -320,6 +320,7 @@
                                 border-left: 7px solid #55efc4;
                                 border-right: 7px solid #55efc4;
                                 // opacity: 0; 
+                                left: 66px;
                                 span{
                                     font-size: 40px;
                                     letter-spacing: 15px;
@@ -349,7 +350,7 @@
                                         display: flex;
                                         // opacity: 0; 
                                         img{
-                                            width: 190px;
+                                            width: 290px;
                                             height: 190px;
                                            
                                         }
@@ -357,7 +358,7 @@
                                             background-color: rgba(255, 255, 255,0.8);
                                             backdrop-filter: blur(10px);
                                             box-shadow: 3px 5px 15px rgba(0, 0, 0,0.4);
-                                            min-width: unset;
+                                            // min-width: unset;
                                            
                                             p{
                                                 color: black;
@@ -378,7 +379,7 @@
     
                 #contact{
                     @extend #def;
-                    height: 50vh;
+                    height: 68vh;
                     @include flex(space-around);
                     .contact_area{
                         @include flex(center);
