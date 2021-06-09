@@ -1,0 +1,436 @@
+@media (min-width: 750px) and (max-width: 1023px) {
+  html {
+    margin: -10px 0 0 -10px;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  html body {
+    width: 100%;
+    height: 100vh;
+  }
+  html body .menu {
+    width: 100px;
+    top: 25%;
+    left: -25px;
+  }
+  html body .menu .menu_tag .menu_items {
+    margin: 4px 10px 4px 0px;
+  }
+  html body .menu .menu_tag .menu_items .menu_link img {
+    width: 20px;
+    height: 20px;
+  }
+  html body .section {
+    width: 100%;
+    height: 100vh;
+  }
+  html body .section h1 {
+    text-align: center;
+    font-size: 6rem;
+    font-family: "Cookie";
+    padding: 20px;
+    margin: 15px;
+    z-index: 1;
+    opacity: 0.7;
+  }
+  html body .section .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  html body .section .video-container .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.3;
+  }
+  html body .section .video-container .color-overlay video {
+    position: absolute;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+  }
+  html body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body main #def, html body main #home, html body main #education, html body main #contact {
+    width: 100%;
+    height: 100vh;
+    font-size: 40px;
+    text-align: center;
+  }
+  html body main #home .home_name {
+    top: 40%;
+    left: 18%;
+    z-index: 3;
+    padding: 15px;
+  }
+  html body main #home .home_name .name {
+    font-size: 45px;
+  }
+  html body main #home .home_1 {
+    position: absolute;
+    left: 12%;
+    height: 60px;
+    z-index: 3;
+  }
+  html body main #home .home_1 .home_item_border {
+    display: none;
+  }
+  html body main #home .home_1 .home_contact {
+    margin: 15px 5px;
+  }
+  html body main #home .home_1 .home_contact .home_items {
+    margin-right: 10px;
+  }
+  html body main #home .home_1 .home_contact .home_items .home_link img {
+    width: 25px;
+    height: 25px;
+  }
+  html body main #home .home_1 .home_contact .home_items .home_link:hover {
+    cursor: pointer;
+  }
+  html body main #about {
+    height: 62vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #about .about_wrap {
+    margin-left: 0;
+  }
+  html body main #about .about_wrap .about_title {
+    width: 273px;
+    font-size: 37px;
+    height: 526px;
+    margin-left: 68px;
+  }
+  html body main #about .about_wrap .about_title p {
+    letter-spacing: 15px;
+  }
+  html body main #about .about_wrap .about_image {
+    top: 3%;
+    left: 274px;
+  }
+  html body main #about .about_wrap .about_image img {
+    width: 198px;
+    height: 194px;
+    border-radius: 15px;
+    -webkit-box-shadow: 9px 10px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 9px 10px 4px rgba(0, 0, 0, 0.4);
+  }
+  html body main #about .about_wrap .about_content {
+    position: absolute;
+    top: 35%;
+  }
+  html body main #about .about_wrap .about_content .detail {
+    margin-left: 390px;
+  }
+  html body main #about .about_wrap .about_content .detail p {
+    font-size: 19px;
+    margin: 23px 6px;
+  }
+  html body main #education {
+    height: 55vh;
+  }
+  html body main #education .edu_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #education .edu_wrap .work_title {
+    width: 230px;
+    height: 42vh;
+    margin-right: 50px;
+  }
+  html body main #education .edu_wrap .work_title p {
+    font-size: 35px;
+    letter-spacing: 10px;
+    padding-bottom: 50px;
+  }
+  html body main #education .edu_wrap .edu_image {
+    top: 54%;
+    right: 204px;
+  }
+  html body main #education .edu_wrap .edu_image img {
+    -webkit-box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    width: 174px;
+    height: 16vh;
+  }
+  html body main #education .edu_wrap .edu_content {
+    margin-left: 20px;
+    margin-right: 55px;
+  }
+  html body main #education .edu_wrap .edu_content .edu_list .edu_items p {
+    font-size: 13px;
+    margin: 30px 5px;
+  }
+  html body main #skill {
+    height: 86vh;
+  }
+  html body main #skill .skill_wrap {
+    background-image: url(../img/skill0.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  html body main #skill .skill_wrap::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(223, 230, 233, 0.9);
+    z-index: 0;
+  }
+  html body main #skill .skill_wrap .skill_title {
+    display: none;
+  }
+  html body main #skill .skill_wrap .skill_img {
+    z-index: 2;
+    top: 10%;
+    left: 40%;
+  }
+  html body main #skill .skill_wrap .skill_img img {
+    width: 174px;
+    height: 90px;
+  }
+  html body main #skill .skill_wrap .skill_content {
+    margin-top: 200px;
+    position: relative;
+  }
+  html body main #skill .skill_wrap .skill_content .skill_list {
+    z-index: 2;
+    margin-left: 80px;
+  }
+  html body main #skill .skill_wrap .skill_content .skill_list .skill_items {
+    margin: 35px 0;
+  }
+  html body main #skill .skill_wrap .skill_content .skill_list .skill_items p {
+    font-size: 11px;
+  }
+  html body main #skill .skill_wrap .skill_content .hyaku {
+    position: absolute;
+    top: 8%;
+    right: 15%;
+    z-index: 2;
+  }
+  html body main #portfolio {
+    width: 100%;
+    min-height: 82vh;
+    background: black;
+  }
+  html body main #portfolio .port_wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 100px;
+    position: relative;
+  }
+  html body main #portfolio .port_wrap .port_title {
+    display: none;
+  }
+  html body main #portfolio .port_wrap .port_title img {
+    width: 560px;
+    height: 100vh;
+  }
+  html body main #portfolio .port_wrap .title_name {
+    position: absolute;
+    height: 85px;
+    background-color: rgba(99, 110, 114, 0.6);
+    top: 7%;
+    right: 0%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-left: 7px solid #55efc4;
+    border-right: 7px solid #55efc4;
+  }
+  html body main #portfolio .port_wrap .title_name span {
+    font-size: 40px;
+    letter-spacing: 15px;
+  }
+  html body main #portfolio .port_wrap .port_img {
+    display: none;
+  }
+  html body main #portfolio .port_wrap .port_img img {
+    width: 193px;
+    height: 169px;
+  }
+  html body main #portfolio .port_wrap .content {
+    width: 100%;
+    margin: 210px 0px 80px 0;
+    z-index: 1;
+  }
+  html body main #portfolio .port_wrap .content .port_list {
+    width: 100%;
+    list-style: none;
+    margin-left: -30px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items img {
+    width: 190px;
+    height: 190px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items .items_content {
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    -webkit-box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
+    min-width: unset;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items .items_content p {
+    color: black;
+    font-size: 15px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items .items_content a {
+    padding: 10px 25px;
+    border-radius: 6px;
+  }
+  html body main #contact {
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #contact .contact_area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #contact .contact_area .local_adress {
+    display: none;
+  }
+  html body main #contact .contact_area .local_contact {
+    width: 95%;
+  }
+  html body footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body footer .footer_title {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  html body footer .footer_des {
+    font-size: 18px;
+  }
+  html body footer .footer_contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body footer .footer_contact .ft_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body footer .footer_contact .ft_list .ft_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #b2bec3;
+  }
+  html body footer .footer_contact .ft_list .ft_link img {
+    width: 30px;
+    height: 30px;
+  }
+}
+/*# sourceMappingURL=ipad.css.map */

@@ -1,0 +1,360 @@
+@media (min-width:321px) and (max-width:410px){
+    @mixin flex($a) {
+        display: flex;
+        justify-content: $a;
+        align-items: center;
+    }
+    @mixin gai($bottom,$width,$left,$height,$bg,$translate) {
+        position: absolute;
+        bottom: $bottom;
+        left: $left;
+        width: $width;
+        height: $height;
+        background-color: $bg;
+        transform:  translateX($translate);
+    }
+    
+    @mixin phone {
+        font-size: 40px;
+        padding: 0 25px;
+        border-left: 2px solid rgba(9, 132, 227,1.0);
+        border-right: 2px solid rgba(9, 132, 227,1.0);
+    }
+    html{
+        body{
+            width: 100%;
+            height: 70vh;
+            overflow-x: hidden;
+            .menu{
+                left: -10px;
+                top: 30%;
+                .menu_tag{
+                    .menu_items{
+                        .menu_link{
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+          
+            main{
+                #def{
+                    width: 100%;
+                    height: 101vh;
+                    font-size: 40px;
+                    text-align: center
+                }
+                #home{
+                    @extend #def;
+                    height: 110vh;
+                    width: 100%;
+                    background-position: right 30% top 50%;
+                }
+                #about{
+                    @extend #def;
+                    height: 147vh;
+                    margin-top: 20px;
+                    margin-left: -5px;
+                    margin-bottom: 20px;
+                    @include flex(space-between);
+                    .span{
+                        span{
+                            font-size: 35px;
+                        }
+                    //     .span_1{
+                    //         @include gai(2px,100%,0,1px,rgba(189, 195, 199,0.8),-130%);
+                    //     }
+                    //     .span_2{
+                    //         @include gai(0,30%,35%,6px,rgba(26, 188, 156,1.0),-230%);
+                    //     }
+                     
+                    }
+                    .about_info{
+                        width: 80%;
+                        min-height: 65vh;
+                        .info_title{
+                            font-size: 22px;
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                        .info_personal{
+                            flex-direction: column;
+                            .personal_info{
+                                margin-top: 30px;
+                                width: 300px;
+                                height: 300px;
+                            }
+                            .personal{
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                .per_title{
+                                    font-size: 20px;
+                                    margin-top: 50px;
+                                }
+                                .detail{
+                                    list-style: url(../img/next-svgrepo-com.svg);
+                                    margin-left: -100px;
+                                    margin-top: -15px;
+                                    .detail_items{
+                                        display: flex;
+                                        .title_bold{
+                                            font-size: 16px;
+                                        }
+                                        .title_info{
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                @media (min-height:800px) {
+                    #about{
+                        height: 115vh;
+                    }
+                }
+                #education{
+                    @extend #def;
+                    background-color: black;
+                    display: flex;
+                    height: 115vh !important;
+                    .edu_wrap{
+                        width: 100%;
+                        @include flex(space-around);
+                        flex-direction: column;
+                        position: unset;
+                        .edu_title_phone{
+                            display: block;
+                            opacity: 0;
+                            margin-top: 50px;
+                            span{
+                                color: white;
+                                @include phone();
+                            }
+                        }
+                        .work_title{
+                           display: none;
+                        }
+                        .edu_image{
+                           display: none;
+                        }
+                        .edu_content{
+                            margin: 0 5px;
+                            .edu_list{
+                                padding: 0;
+                                .edu_items{
+                                    p{
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                #skill{
+                    @include flex(space-around);
+                    height: 113vh;
+                    background-color: white;
+                    .skill_wrap{
+                        width: 100%;
+                        height: 88%;
+                        @include flex(space-between);
+                        flex-direction: column;
+                        .skill_title{
+                            display: none;
+                        }
+                        .skill_img{
+                            display: none;
+                        }
+                        .skill_title_phone{
+                            opacity: 0;
+                            margin: 30px 0 10px 0;
+                            display: block;
+                            span{
+                                @include phone();
+                            }
+                        }
+                        .skill_content{
+                           width: 80%;
+                           .skill_list{
+                                margin-left: -35px;
+                               .skill_items{
+                                   display: flex;
+                                   flex-direction: column;
+                                   margin: 35px 0;
+                                    .skill_pacent{
+                                        span{
+                                            background-color: rgba(255, 118, 117,1.0) !important;
+                                        }
+                                    }
+                                   p{
+                                       font-size: 11px;
+                                   }
+                               }
+                           }
+                           .hyaku{
+                               top: 20%;
+                               right: 10%;
+                               font-size: 13px;
+                           }
+                        }
+                    }
+                }
+    
+                #portfolio{
+                    min-height: 82vh ;
+                    .port_wrap{
+                        flex-direction: column;
+                        @include flex(space-between);
+                        margin: 0;
+                        position: relative;
+                        .port_title{
+                           display: none;
+                        }
+                        .title_name{
+                            background-color: transparent;
+                            position: unset;
+                            margin-top: 50px;
+                            margin-bottom: -40px;
+                            width: 100%;
+                            opacity: 0;
+                            transform: rotate(90deg);
+                            span{
+                                @include phone();
+                                letter-spacing: 11px;
+                            }
+                        }
+                        .port_img{
+                            display: none;
+                        }
+                        .content{
+                            margin: 80px 0;
+                            .port_list{
+                                margin-left: -35px;
+                                .port_items{
+                                    margin-top: 40px;
+                                    // opacity: 0; 
+                                    img{
+                                        width: 162px !important;
+                                        height: 150px
+                                       
+                                    }
+                                    .items_content{
+                                        min-width: 89%;
+                                        p{
+                                            color: black;
+                                            font-size: 12px;
+                                        }
+                                        a{
+                                            padding: 6px 65px;
+                                            border-radius: 6px;
+                                            font-size: 12px;
+                                            margin-bottom: 5px;
+                                           width: 60px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                
+                #contact{
+                    @extend #def;
+                    min-height: 147vh;
+                    @include flex(space-around);
+                    z-index: 0;
+                    .contact_area{
+                        @include flex(center);
+                        flex-direction: column;
+                        width: 100%;
+                        .local_adress{
+                            @include flex(space-between); 
+                            margin-left: -130px;                       
+                            margin-top: -100px;
+                            .adress{
+                                @include flex(flex-start);
+                                .adress_info{
+                                    padding-left: 15px;
+                                    width: 250px;
+                                    p{
+                                        font-size: 22px;
+                                    }
+                                    span{
+                                        font-size: 15px;
+                                    }
+                                }
+                                &+.adress{
+                                    margin-top: 35px;
+                                }
+                            }
+                        }
+                        .local_contact{
+                            width: 85%;
+                            opacity: 0;
+                            form{
+                                input{
+                                    height: 40px;
+                                    margin-top: 30px;
+                                    border-radius: 5px;
+                                    border: 1px solid grey;
+                                    padding-left: 10px;
+                                    ::placeholder{
+                                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                    }
+                                }
+                                input[name="name"]{
+                                    outline: none;
+                                    width: 100%;
+                                }
+                                input[name="email"]{
+                                    outline: none;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            footer{
+                min-height: 20vh;
+                width: 100%;
+                background-color: rgba(223, 230, 233,1.0);
+                @include flex(space-around);
+                flex-direction: column;
+                span{
+                    margin-bottom: 20px;
+                }
+                .footer_title{
+                    font-size: 20px;
+                }
+                .footer_des{
+                    font-size: 18px;
+                    font-style: italic;
+                    margin: 0 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .footer_contact{
+                    margin-left: -35px;
+                    .ft_list{
+                        .ft_link{
+                            padding:5px;
+                            width: 40px;
+                            height: 40px;
+                            i{
+                                color: white;
+                               
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}

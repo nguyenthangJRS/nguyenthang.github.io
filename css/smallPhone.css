@@ -1,0 +1,438 @@
+@media (min-width: 321px) and (max-width: 410px) {
+  html body {
+    width: 100%;
+    height: 70vh;
+    overflow-x: hidden;
+  }
+  html body .menu {
+    left: -10px;
+    top: 30%;
+  }
+  html body .menu .menu_tag .menu_items .menu_link {
+    padding: 5px;
+  }
+  html body main #def, html body main #home, html body main #about, html body main #education, html body main #contact {
+    width: 100%;
+    height: 101vh;
+    font-size: 40px;
+    text-align: center;
+  }
+  html body main #home {
+    height: 110vh;
+    width: 100%;
+    background-position: right 30% top 50%;
+  }
+  html body main #about {
+    height: 147vh;
+    margin-top: 20px;
+    margin-left: -5px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #about .span span {
+    font-size: 35px;
+  }
+  html body main #about .about_info {
+    width: 80%;
+    min-height: 65vh;
+  }
+  html body main #about .about_info .info_title {
+    font-size: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  html body main #about .about_info .info_personal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body main #about .about_info .info_personal .personal_info {
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+  }
+  html body main #about .about_info .info_personal .personal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  html body main #about .about_info .info_personal .personal .per_title {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  html body main #about .about_info .info_personal .personal .detail {
+    list-style: url(../img/next-svgrepo-com.svg);
+    margin-left: -100px;
+    margin-top: -15px;
+  }
+  html body main #about .about_info .info_personal .personal .detail .detail_items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html body main #about .about_info .info_personal .personal .detail .detail_items .title_bold {
+    font-size: 16px;
+  }
+  html body main #about .about_info .info_personal .personal .detail .detail_items .title_info {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 410px) and (min-height: 800px) {
+  html body main #about {
+    height: 115vh;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 410px) {
+  html body main #education {
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 115vh !important;
+  }
+  html body main #education .edu_wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: unset;
+  }
+  html body main #education .edu_wrap .edu_title_phone {
+    display: block;
+    opacity: 0;
+    margin-top: 50px;
+  }
+  html body main #education .edu_wrap .edu_title_phone span {
+    color: white;
+    font-size: 40px;
+    padding: 0 25px;
+    border-left: 2px solid #0984e3;
+    border-right: 2px solid #0984e3;
+  }
+  html body main #education .edu_wrap .work_title {
+    display: none;
+  }
+  html body main #education .edu_wrap .edu_image {
+    display: none;
+  }
+  html body main #education .edu_wrap .edu_content {
+    margin: 0 5px;
+  }
+  html body main #education .edu_wrap .edu_content .edu_list {
+    padding: 0;
+  }
+  html body main #education .edu_wrap .edu_content .edu_list .edu_items p {
+    font-size: 20px;
+  }
+  html body main #skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 113vh;
+    background-color: white;
+  }
+  html body main #skill .skill_wrap {
+    width: 100%;
+    height: 88%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body main #skill .skill_wrap .skill_title {
+    display: none;
+  }
+  html body main #skill .skill_wrap .skill_img {
+    display: none;
+  }
+  html body main #skill .skill_wrap .skill_title_phone {
+    opacity: 0;
+    margin: 30px 0 10px 0;
+    display: block;
+  }
+  html body main #skill .skill_wrap .skill_title_phone span {
+    font-size: 40px;
+    padding: 0 25px;
+    border-left: 2px solid #0984e3;
+    border-right: 2px solid #0984e3;
+  }
+  html body main #skill .skill_wrap .skill_content {
+    width: 80%;
+  }
+  html body main #skill .skill_wrap .skill_content .skill_list {
+    margin-left: -35px;
+  }
+  html body main #skill .skill_wrap .skill_content .skill_list .skill_items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 35px 0;
+  }
+  html body main #skill .skill_wrap .skill_content .skill_list .skill_items .skill_pacent span {
+    background-color: #ff7675 !important;
+  }
+  html body main #skill .skill_wrap .skill_content .skill_list .skill_items p {
+    font-size: 11px;
+  }
+  html body main #skill .skill_wrap .skill_content .hyaku {
+    top: 20%;
+    right: 10%;
+    font-size: 13px;
+  }
+  html body main #portfolio {
+    min-height: 82vh;
+  }
+  html body main #portfolio .port_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    position: relative;
+  }
+  html body main #portfolio .port_wrap .port_title {
+    display: none;
+  }
+  html body main #portfolio .port_wrap .title_name {
+    background-color: transparent;
+    position: unset;
+    margin-top: 50px;
+    margin-bottom: -40px;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  html body main #portfolio .port_wrap .title_name span {
+    font-size: 40px;
+    padding: 0 25px;
+    border-left: 2px solid #0984e3;
+    border-right: 2px solid #0984e3;
+    letter-spacing: 11px;
+  }
+  html body main #portfolio .port_wrap .port_img {
+    display: none;
+  }
+  html body main #portfolio .port_wrap .content {
+    margin: 80px 0;
+  }
+  html body main #portfolio .port_wrap .content .port_list {
+    margin-left: -35px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items {
+    margin-top: 40px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items img {
+    width: 162px !important;
+    height: 150px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items .items_content {
+    min-width: 89%;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items .items_content p {
+    color: black;
+    font-size: 12px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items .items_content a {
+    padding: 6px 65px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    width: 60px;
+  }
+  html body main #contact {
+    min-height: 147vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 0;
+  }
+  html body main #contact .contact_area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  html body main #contact .contact_area .local_adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: -130px;
+    margin-top: -100px;
+  }
+  html body main #contact .contact_area .local_adress .adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #contact .contact_area .local_adress .adress .adress_info {
+    padding-left: 15px;
+    width: 250px;
+  }
+  html body main #contact .contact_area .local_adress .adress .adress_info p {
+    font-size: 22px;
+  }
+  html body main #contact .contact_area .local_adress .adress .adress_info span {
+    font-size: 15px;
+  }
+  html body main #contact .contact_area .local_adress .adress + .adress {
+    margin-top: 35px;
+  }
+  html body main #contact .contact_area .local_contact {
+    width: 85%;
+    opacity: 0;
+  }
+  html body main #contact .contact_area .local_contact form input {
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 10px;
+  }
+  html body main #contact .contact_area .local_contact form input ::-webkit-input-placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  html body main #contact .contact_area .local_contact form input :-ms-input-placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  html body main #contact .contact_area .local_contact form input ::-ms-input-placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  html body main #contact .contact_area .local_contact form input ::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  html body main #contact .contact_area .local_contact form input[name="name"] {
+    outline: none;
+    width: 100%;
+  }
+  html body main #contact .contact_area .local_contact form input[name="email"] {
+    outline: none;
+    width: 100%;
+  }
+  html body footer {
+    min-height: 20vh;
+    width: 100%;
+    background-color: #dfe6e9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body footer span {
+    margin-bottom: 20px;
+  }
+  html body footer .footer_title {
+    font-size: 20px;
+  }
+  html body footer .footer_des {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  html body footer .footer_contact {
+    margin-left: -35px;
+  }
+  html body footer .footer_contact .ft_list .ft_link {
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  html body footer .footer_contact .ft_list .ft_link i {
+    color: white;
+  }
+}
+/*# sourceMappingURL=smallPhone.css.map */

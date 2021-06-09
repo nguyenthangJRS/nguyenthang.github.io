@@ -1,0 +1,423 @@
+@media (min-width:750px) and (max-width:1023px){
+    @mixin flex($a) {
+        display: flex;
+        justify-content: $a;
+        align-items: center;
+    }
+    @mixin gai($bottom,$width,$left,$height,$bg,$translate) {
+        position: absolute;
+        bottom: $bottom;
+        left: $left;
+        width: $width;
+        height: $height;
+        background-color: $bg;
+        transform:  translateX($translate);
+    }
+    @mixin img {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  
+    @mixin skill($pacent) {
+        width: $pacent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #686de0;
+        height: 5px;
+        transition: 2s;
+        transform: translateX(-101%);
+    }
+    @mixin btn($top) {
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background: grey;
+        left: 5px;
+        top: $top;
+        border-radius: 5px;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    html{
+        margin: -10px 0 0 -10px;
+    
+        padding: 0;
+        box-sizing: border-box;
+        body{
+           
+            ///////////////////////////////////////////////
+            ///////////////////////////////////////////////
+            width: 100%;
+            height: 100vh;
+            .menu{
+                width: 100px;
+                top: 25%;
+                left: -25px;
+                .menu_tag{
+                    .menu_items{
+                        margin: 4px 10px 4px 0px;
+                        .menu_link{
+                            img{
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                       ///////////////////////// .add class span class
+                    }
+                }
+            }
+            // .section
+                .section{
+                    width: 100%;
+                    height: 100vh;
+                    h1{
+                        text-align: center;
+                        font-size: 6rem;
+                        font-family: "Cookie";
+                        padding: 20px;
+                        margin: 15px;
+                        z-index: 1;
+                        opacity: 0.7;
+                    }
+                    .video-container{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        .color-overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: lightblue;
+                            width: 100%;
+                            height: 100vh;
+                            opacity: 0.3;
+                            video{
+                                position: absolute;
+                                top: 0;
+                                width: 100vh;
+                                height: 100vh;
+                            }
+                          }
+                    }
+                }
+                // main 
+            main{
+                @include flex(center);
+                flex-direction: column;
+                #def{
+                    width: 100%;
+                    height: 100vh;
+                    font-size: 40px;
+                    text-align: center
+                }
+                #home{
+                    @extend #def;
+                    .home_name{
+                        top: 40%;
+                        left: 18%;
+                        z-index: 3;
+                        padding: 15px;
+                        .name{
+                           
+                            font-size: 45px;
+                        }
+                    }
+                    .home_1{
+                        position: absolute;
+                        left: 12%;
+                        height: 60px;
+                        z-index: 3;
+                        .home_item_border{
+                            display: none;
+                        }
+                        .home_contact{
+                            margin: 15px 5px;
+                            .home_items{
+                                margin-right: 10px;
+                                .home_link{
+                                   
+                                    img{
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+    ///////////////////////////////////////////////////////////////////////
+                #about{
+                    height: 62vh;
+                    @include flex(space-around);
+                    .about_wrap{
+                        margin-left: 0;
+                        .about_title{
+                            width: 273px;
+                            font-size: 37px;
+                            height: 526px;
+                            margin-left: 68px;
+                            // opacity: 0;
+                            p{
+                                // opacity: 0;
+                                letter-spacing: 15px;
+                            }
+                        }
+                        .about_image{
+                            top: 3%;
+                            left: 274px;
+                            // opacity: 0;
+                            img{
+                                width: 198px;
+                                height: 194px;
+                                border-radius: 15px;
+                                box-shadow: 9px 10px 4px rgba(0,0,0,0.4);
+                            }
+                        }
+                        .about_content{
+                            position: absolute;
+                            top: 35%;
+                            .detail{
+                                margin-left: 390px;
+                                .detail_items{
+                                    // opacity: 0;
+                                }
+                                p{
+                                    font-size: 19px;
+                                    margin: 23px 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #education{
+                    @extend #def;
+                    height: 55vh;
+                    .edu_wrap{
+                        @include flex(space-between);
+                        .work_title{
+                            width: 230px;
+                            height: 42vh;
+                            margin-right: 50px;
+                            p{
+                                font-size: 35px;
+                                letter-spacing: 10px;
+                                padding-bottom: 50px;
+                            }
+                        }
+                        .edu_image{
+                            top: 54%;
+                            right: 204px;
+                            img{
+                                box-shadow: 2px 5px 15px rgba(0, 0, 0,0.4);
+                                border-radius: 15px;
+                                width: 174px;
+                                height: 16vh;
+                            }
+                        }
+                        .edu_content{
+                            margin-left: 20px;
+                            margin-right: 55px;
+                            .edu_list{
+                                .edu_items{
+                                    p{
+                                        font-size: 13px;
+                                        margin: 30px 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+    /////////////////////////////////////////////////////////////////////
+                #skill{
+                    height: 86vh;
+                    .skill_wrap{
+                        background-image: url(../img/skill0.jpeg);
+                        @include img();
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: rgba(223, 230, 233,0.9);
+                            z-index: 0;
+                        }
+                        .skill_title{
+                            display: none;
+                        }
+                        .skill_img{
+                            z-index: 2;
+                            top: 10%;
+                            left: 40%;
+                            // opacity: 0;
+                            img{
+                                width: 174px;
+                                height: 90px;
+                            }
+                        }
+                        .skill_content{
+                           margin-top: 200px;
+                           position: relative;
+                           .skill_list{
+                               z-index: 2;
+                               margin-left: 80px;
+                               .skill_items{
+                                   margin: 35px 0;
+                                   p{
+                                       // opacity: 0; 
+                                       font-size: 11px;
+                                   }
+                               }
+                           }
+                           .hyaku{
+                               position: absolute;
+                               top: 8%;
+                               right: 15%;
+                               z-index: 2;
+                               // opacity: 0; 
+                           }
+                        }
+                    }
+                }
+    
+                    #portfolio{
+                        width: 100%;
+                        min-height: 82vh ;
+                        background: black;
+                        .port_wrap{
+                            flex-direction: row-reverse;
+                            @include flex(space-between);
+                            margin: 0 100px;
+                            position: relative;
+                            .port_title{
+                             display: none;
+                                img{
+                                    width: 560px;
+                                    height: 100vh;
+                                }
+                            }
+                            .title_name{
+                                position: absolute;
+                                // width: 395px;
+                                height: 85px;
+                                background-color: rgba(99, 110, 114,0.6);
+                                top: 7%;
+                                right: 0%;
+                                user-select: none;
+                                transform: rotate(0);
+                                @include flex(center);
+                                border-left: 7px solid #55efc4;
+                                border-right: 7px solid #55efc4;
+                                // opacity: 0; 
+                                span{
+                                    font-size: 40px;
+                                    letter-spacing: 15px;
+                                }
+                            }
+                            .port_img{
+                                display: none;
+                                // opacity: 0; 
+                                ///////////////////////////////////////
+                                img{
+                                    width: 193px;
+                                    height: 169px;
+                                }
+                            }
+                            .content{
+                                width: 100%;
+                                margin: 210px 0px 80px 0;
+                                z-index: 1;
+                                .port_list{
+                                    width: 100%;
+                                    list-style: none;
+                                    margin-left: -30px;
+                                    .port_items{
+                                        margin-top: 40px;
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        // opacity: 0; 
+                                        img{
+                                            width: 190px;
+                                            height: 190px;
+                                           
+                                        }
+                                        .items_content{
+                                            background-color: rgba(255, 255, 255,0.8);
+                                            backdrop-filter: blur(10px);
+                                            box-shadow: 3px 5px 15px rgba(0, 0, 0,0.4);
+                                            min-width: unset;
+                                           
+                                            p{
+                                                color: black;
+                                                font-size: 15px;
+                                            }
+                                            a{
+                                                padding: 10px 25px;
+                                                border-radius: 6px;
+                                               
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+    
+                #contact{
+                    @extend #def;
+                    height: 50vh;
+                    @include flex(space-around);
+                    .contact_area{
+                        @include flex(center);
+                        .local_adress{
+                            display: none;
+                        }
+                        .local_contact{
+                            width: 95%;
+                            // opacity: 0; 
+                        }
+                    }
+                }
+            }
+            footer{
+                @include flex(space-around);
+                .footer_title{
+                    margin-top: 20px;
+                    font-size: 22px;
+                }
+                .footer_des{
+                    font-size: 18px;
+                }
+                .footer_contact{
+                    @include flex(center);
+                    .ft_list{
+                        @include flex(center);
+                        .ft_link{
+                            @include flex(center);
+                            background: #b2bec3;
+                            img{
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}
