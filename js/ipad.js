@@ -1,4 +1,6 @@
-if(window.screen.width >=1024 && window.screen.width <=1500){
+console.log(window.innerWidth)
+
+if(window.innerWidth >=1024 && window.innerWidth <=1500){
     window.onscroll = () =>{
         let scroll = window.scrollY;
         // console.log(scroll)
@@ -99,10 +101,11 @@ if(window.screen.width >=1024 && window.screen.width <=1500){
     }
 }
 ////////////////// ipad //////////////////////////////////////////
-if(window.screen.width >=750 && window.screen.width <=1023){
+if(window.innerWidth >=750 && window.innerWidth <=1023){
     window.onscroll = () =>{
         let scroll = window.scrollY;
         // console.log(scroll)
+       
 
 /////////////////////// about
         if(scroll<400){
@@ -130,7 +133,7 @@ if(window.screen.width >=750 && window.screen.width <=1023){
             }
         }
         // skill//////////////////////////////////////
-        if(scroll<1423){
+        if(scroll<1023){
             skill_img.style.animation = `none`;
         }
        else{
@@ -203,7 +206,7 @@ if(window.screen.width >=750 && window.screen.width <=1023){
 
 ////////////////// phone //////////////////////////////////////////
 
-if(window.screen.width >=410 && window.screen.width <=749){
+if(window.innerWidth >=410 && window.innerWidth <=749){
     menu.forEach(item => {
         item.onmouseenter = (event)=>{
             const items_menu = event.target;
@@ -293,7 +296,7 @@ if(window.screen.width >=410 && window.screen.width <=749){
 ////////////////// small phone //////////////////////////////////////////
 
 
-if(window.screen.width <410){
+if(window.innerWidth <410){
     menu.forEach(item => {
         item.onmouseenter = (event)=>{
             const items_menu = event.target;
