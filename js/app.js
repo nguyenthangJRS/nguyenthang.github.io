@@ -11,25 +11,25 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
-particlesJS('',
+particlesJS('home',
   
 {
   "particles": {
     "number": {
-      "value": 55,
+      "value": 170,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#3498db"
+      "value": "#dfe6e9"
     },
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 0,
-        "color": "#000000"
+        "width": 0.5,
+        "color": "#dfe6e9"
       },
       "polygon": {
         "nb_sides": 6
@@ -51,10 +51,10 @@ particlesJS('',
       }
     },
     "size": {
-      "value": 7,
-      "random": true,
+      "value": 1,
+      "random": false,
       "anim": {
-        "enable": false,
+        "enable": true,
         "speed": 20,
         "size_min": 0.1,
         "sync": false
@@ -69,15 +69,15 @@ particlesJS('',
     },
     "move": {
       "enable": true,
-      "speed": 2,
+      "speed": 3,
       "direction": "center",
       "random": true,
       "straight": false,
-      "out_mode": "out",
+      "out_mode": "bounce",
       "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
+        "enable": true,
+        "rotateX": 1000,
+        "rotateY": 1500
       }
     }
   },

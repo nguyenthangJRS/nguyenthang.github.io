@@ -1,78 +1,48 @@
 console.log(window.innerWidth)
 
+
 if(window.innerWidth >=1024 && window.innerWidth <1500){
     window.onscroll = () =>{
         let scroll = window.scrollY;
         // console.log(scroll)
-
+     
 /////////////////////// about
         if(scroll<255){
-            personal.style.animation = `none`;
+            personal.style.animation = `none`;  
         }
         else{
-            about.style.animation = `show_about_img 0.8s ease-in-out 0.5s forwards`;
-            personal.style.animation = `show_title 2s ease-in-out 1.3s forwards`;
-            about_img.style.animation = `personal 0.7s ease-in-out 1.6s forwards`;
-            for(let i = 0;i<list_about.length;i++){
-                list_about[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
-            }
+            resize_about(personal,about,about_img,list_about);
         }
         // edu /////////////////////////////////
         if(scroll<1190){
             edu_title.style.animation = `none`;
-           
         }
         else{
-            edu.style.animation = ` edu_bg 1s ease-in-out 0.5s forwards`;
-            edu_title.style.animation = `show_title_edu 2s ease-in-out 0.6s forwards`;
-            edu_img.style.animation = `work_img 0.8s ease-in-out 1.4s forwards`;
-            for(let i = 0;i<edu_item.length;i++){
-                edu_item[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
-            }
+            resize_edu(edu_title,edu,edu_img,edu_item);
         }
         // skill//////////////////////////////////////
         if(scroll<2000){
             skill_img.style.animation = `none`;
         }
-       else{
-            skill_title.style.animation = `skill_title 1.2s ease-in-out 0.4s forwards`;
-            skill_img.style.animation = ` skill_img 1s ease-in-out 0.5s forwards`;
+        else{
+            resize_skill_1(skill_img,skill_title);
         }
         if(scroll>2280){
-            skill_pacent.forEach(item =>{
-                item.style.animation = `skill_show 2s ease-in-out 0.5s forwards`;
-            })
-            skill_items.forEach(item =>{
-                item.style.animation = `skill_title 0.8s ease-in-out 0.5s forwards`;
-            })
-            hyaku.style.animation  = `skill_title 0.8s ease-in-out 2s forwards`;
+            resize_skill_2(skill_items,skill_pacent,hyaku);
         }
         //////////////// portfolio
         if(scroll<3060){
             title_name.style.animation = `none`;
         }
         else{
-            title_name.style.animation = ` show_port 2s ease-in-out 2s forwards`;
-            port_img.style.animation = `port_img 1.3s ease-in-out 0.3s forwards`;
-            port_title.style.animation = `port_title 1.3s ease-in-out 0.5s forwards`;
-            for(let i = 0;i<port_items.length;i++){
-                port_items[i].style.animation = `work_img 1.3s ease-in-out ${0.6*i}s forwards`;
-            }
+            resize_pofolio(title_name,port_img,port_title,port_items,'show_port');
         }
         // contact //////////
         if(scroll< 4000){
-            contact.style.animation = `none`;
-            span_1.style.animation = `none`;
-            span_2.style.animation = `none`;
-           
+            resize_contact_0(contact,span_1,span_2)
         }else{
-            contact.style.animation = `span_title 1s ease-in-out 0.5s forwards`;
-            span_1.style.animation = `span_title_1 0.7s ease-in-out 1.5s forwards`;
-            span_2.style.animation = `span_title_2 0.7s ease-in-out 2.2s forwards`;
-            local_adress.style.animation = ` local_adress 1.5s ease-in-out 2.5s forwards`;
-            local_contact.style.animation = `local_contact 2.5s ease-in-out 1.5s forwards`;
+            resize_contact(contact,span_1,span_2,local_adress,local_contact);
         }
-
         /////// menu color change/////////////////////////////////////////////////
         tag_li.forEach(item => {
             const tag_icon = item.querySelector('a')
@@ -112,12 +82,7 @@ if(window.innerWidth >=750 && window.innerWidth <=1023){
             personal.style.animation = `none`;
         }
         else{
-            about.style.animation = `show_about_img 0.8s ease-in-out 0.5s forwards`;
-            personal.style.animation = `show_title 2s ease-in-out 1.3s forwards`;
-            about_img.style.animation = `personal 0.7s ease-in-out 1.6s forwards`;
-            for(let i = 0;i<list_about.length;i++){
-                list_about[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
-            }
+            resize_about(personal,about,about_img,list_about);
         }
         // edu /////////////////////////////////
         if(scroll<1000){
@@ -125,55 +90,32 @@ if(window.innerWidth >=750 && window.innerWidth <=1023){
            
         }
         else{
-            edu.style.animation = ` edu_bg 1s ease-in-out 0.5s forwards`;
-            edu_title.style.animation = `show_title_edu 2s ease-in-out 0.6s forwards`;
-            edu_img.style.animation = `work_img 0.8s ease-in-out 1.4s forwards`;
-            for(let i = 0;i<edu_item.length;i++){
-                edu_item[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
-            }
+            resize_edu(edu_title,edu,edu_img,edu_item);
         }
         // skill//////////////////////////////////////
         if(scroll<1023){
             skill_img.style.animation = `none`;
         }
        else{
-            skill_title.style.animation = `skill_title 1.2s ease-in-out 0.4s forwards`;
-            skill_img.style.animation = ` skill_img 1s ease-in-out 0.5s forwards`;
+            resize_skill_1(skill_img,skill_title);
         }
         if(scroll>1835){
-            skill_pacent.forEach(item =>{
-                item.style.animation = `skill_show 2s ease-in-out 0.5s forwards`;
-            })
-            skill_items.forEach(item =>{
-                item.style.animation = `skill_title 0.8s ease-in-out 0.5s forwards`;
-            })
-            hyaku.style.animation  = `skill_title 0.8s ease-in-out 2s forwards`;
+            resize_skill_2(skill_items,skill_pacent,hyaku);
         }
         //////////////// portfolio
         if(scroll<2500){
             title_name.style.animation = `none`;
         }
         else{
-            title_name.style.animation = ` span_title_1 2s ease-in-out  forwards`;
-            port_img.style.animation = `port_img 1.3s ease-in-out 0.3s forwards`;
-            port_title.style.animation = `port_title 1.3s ease-in-out 0.5s forwards`;
-            for(let i = 0;i<port_items.length;i++){
-                port_items[i].style.animation = `work_img 1.3s ease-in-out ${0.6*i}s forwards`;
-            }
+            resize_pofolio(title_name,port_img,port_title,port_items,'span_title_1');
         }
         // contact //////////
 
         if(scroll< 3470){
-            contact.style.animation = `none`;
-            span_1.style.animation = `none`;
-            span_2.style.animation = `none`;
+            resize_contact_0(contact,span_1,span_2)
            
         }else{
-            contact.style.animation = `span_title 1s ease-in-out 0.5s forwards`;
-            span_1.style.animation = `span_title_1 0.7s ease-in-out 1.5s forwards`;
-            span_2.style.animation = `span_title_2 0.7s ease-in-out 2.2s forwards`;
-            local_adress.style.animation = ` local_adress 1.5s ease-in-out 2.5s forwards`;
-            local_contact.style.animation = `local_contact 2.5s ease-in-out 1.5s forwards`;
+            resize_contact(contact,span_1,span_2,local_adress,local_contact);
         }
 
         /////// menu color change/////////////////////////////////////////////////

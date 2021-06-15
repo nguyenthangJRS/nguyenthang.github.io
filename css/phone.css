@@ -38,28 +38,6 @@
   html body .navbar .nav_brand {
     padding: 0 50px;
   }
-  html body .navbar .nav_brand svg .path {
-    stroke-dasharray: 90;
-    stroke-dashoffset: 0;
-    -webkit-animation: path 3s linear 0.4s forwards;
-            animation: path 3s linear 0.4s forwards;
-  }
-  @-webkit-keyframes path {
-    0% {
-      stroke-dashoffset: 100;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
-  @keyframes path {
-    0% {
-      stroke-dashoffset: 100;
-    }
-    100% {
-      stroke-dashoffset: 0;
-    }
-  }
   html body .navbar .menu_btn {
     width: 50px;
     height: 50px;
@@ -125,9 +103,9 @@
     -webkit-transform: translateX(-120%);
             transform: translateX(-120%);
     background-color: grey;
-    width: 200px;
+    width: 273px;
     top: 40%;
-    left: -70px;
+    left: -100px;
   }
   @-webkit-keyframes fade_menu {
     0% {
@@ -211,7 +189,6 @@
   }
   html body main #home {
     position: relative;
-    background-image: url(../img/bg12.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -366,7 +343,7 @@
     opacity: 0;
   }
   html body main #about .about_wrap .about_content .detail p {
-    font-size: 22px;
+    font-size: 16px;
     margin: 30px 10px;
   }
   html body main #education {
@@ -417,7 +394,7 @@
     padding: 0;
   }
   html body main #education .edu_wrap .edu_content .edu_list .edu_items p {
-    font-size: 20px;
+    font-size: 16px;
   }
   html body main #skill {
     display: -webkit-box;
@@ -554,6 +531,9 @@
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content p {
     color: black;
     font-size: 12px;
+  }
+  html body main #portfolio .port_wrap .content .port_list .port_items .items_content p:nth-child(1) {
+    font-size: 18px;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content a {
     padding: 6px 65px;

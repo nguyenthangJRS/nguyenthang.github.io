@@ -102,13 +102,6 @@
                 background-color: #636e72;
                 .nav_brand{
                     padding: 0 50px;
-                    svg{
-                        .path{
-                            @include path();
-                        }
-                        // animation: svg_path 1s ease-in-out 0.3s forwards;
-                    }
-                    
                 }
                 .menu_btn{
                     width: 50px;
@@ -156,9 +149,9 @@
             .menu{
                 transform: translateX(-120%);
                 background-color: grey;
-                width: 200px;
+                width: 273px;
                 top: 40%;
-                left: -70px;
+                left: -100px;
 
                 @keyframes fade_menu {
                     0%{
@@ -204,7 +197,7 @@
                 #home{
                     @extend #def;
                     position: relative;
-                    background-image: url(../img/bg12.jpg);
+                    // background-image: url(../img/home2.jpeg);
                     @include img();
                     @include flex(center);
                     width: 100%;
@@ -312,7 +305,7 @@
                                     opacity: 0;
                                 }
                                 p{
-                                    font-size: 22px;
+                                    font-size: 16px;
                                     margin: 30px 10px;
                                 }
                             }
@@ -350,7 +343,7 @@
                                 padding: 0;
                                 .edu_items{
                                     p{
-                                        font-size: 20px;
+                                        font-size: 16px;
                                     }
                                 }
                             }
@@ -452,12 +445,15 @@
                                             color: black;
                                             font-size: 12px;
                                         }
+                                        p:nth-child(1){
+                                            font-size: 18px;
+                                        }
                                         a{
                                             padding: 6px 65px;
                                             border-radius: 6px;
                                             font-size: 12px;
                                             margin-bottom: 5px;
-                                           width: 60px;
+                                            width: 60px;
                                         }
                                     }
                                 }

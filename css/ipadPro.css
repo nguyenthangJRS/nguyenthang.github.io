@@ -84,8 +84,8 @@
   }
   html body main #home .home_name {
     position: absolute;
-    top: 41%;
-    left: 24%;
+    top: 27%;
+    left: 31%;
     z-index: 3;
     padding: 15px;
   }

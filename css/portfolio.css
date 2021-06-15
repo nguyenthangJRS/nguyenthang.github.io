@@ -12,22 +12,55 @@ html body {
 }
 
 html body .load {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
   z-index: 99;
-  top: 0;
-  width: 100%;
-  height: 50vh;
-  position: absolute;
-  z-index: 150;
+  -webkit-animation: load 0.1s ease-in-out 3.7s forwards;
+          animation: load 0.1s ease-in-out 3.7s forwards;
 }
 
 html body .load .load_left {
-  right: 0;
-  background-color: #2d3436;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 99;
+  top: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-animation: load_top 2s ease-in-out 0.5s forwards;
+          animation: load_top 2s ease-in-out 0.5s forwards;
+}
+
+html body .load .load_right {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 99;
+  bottom: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: load_bottom 2s ease-in-out 0.5s forwards;
+          animation: load_bottom 2s ease-in-out 0.5s forwards;
+}
+
+html body .load .load_center {
+  position: absolute;
+  top: 50vh;
+  width: 100%;
+  height: 2px;
+  background: white;
+  z-index: 100;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: load_center 1.5s ease-in-out;
+          animation: load_center 1.5s ease-in-out;
 }
 
 html body .navbar {
@@ -156,30 +189,6 @@ html body .section {
   z-index: -2;
 }
 
-html body .section h1 {
-  text-align: center;
-  font-size: 6rem;
-  font-family: "Cookie";
-  padding: 20px;
-  margin: 15px;
-  z-index: 1;
-  opacity: 0.7;
-}
-
-html body .section .video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-html body .section .video-container img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 html body main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,6 +215,7 @@ html body main #def, html body main #home, html body main #about, html body main
 
 html body main #home {
   position: relative;
+  background: #130f40;
 }
 
 html body main #home .home_name {
@@ -214,7 +224,9 @@ html body main #home .home_name {
   left: 30%;
   z-index: 3;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.6);
+  color: #f5f6fa;
+  overflow: hidden;
+  background: transparent;
 }
 
 html body main #home .home_name .name {
@@ -1930,6 +1942,98 @@ html body footer .footer_contact .ft_list .ft_link img {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes load_top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    display: none;
+  }
+}
+
+@keyframes load_top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    display: none;
+  }
+}
+
+@-webkit-keyframes load_bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    display: none;
+  }
+}
+
+@keyframes load_bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    display: none;
+  }
+}
+
+@-webkit-keyframes load_center {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    display: none;
+  }
+}
+
+@keyframes load_center {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    display: none;
+  }
+}
+
+@-webkit-keyframes load {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+    z-index: -2;
+  }
+}
+
+@keyframes load {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+    z-index: -2;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */

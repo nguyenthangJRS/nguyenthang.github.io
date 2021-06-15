@@ -18,11 +18,12 @@
     background-size: cover;
 }
 @mixin load {
-    top: 0;
-    width: 100%;
-    height: 50vh;
     position: absolute;
-    z-index: 150;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 99;
 }
 @mixin skill($pacent) {
     width: $pacent;
@@ -61,16 +62,34 @@ html{
     box-sizing: border-box;
     body{
        .load{
-           position: relative;
+           position: absolute;
            top: 0;
            left: 0;
            height: 100vh;
            width: 100%;
            z-index: 99;
-           @include load();
+           animation: load 0.1s ease-in-out 3.7s forwards; 
            .load_left{
-                right: 0;
-                background-color: #2d3436;
+               @include load();
+               top: 0;
+                transform: translateY(50%);
+               animation: load_top 2s ease-in-out 0.5s forwards; 
+           }
+           .load_right{
+               @include load();
+               bottom: 0;
+                transform: translateY(0);
+               animation: load_bottom 2s ease-in-out 0.5s forwards; 
+           }
+           .load_center{
+               position: absolute;
+               top: 50vh;
+               width: 100%;
+               height: 2px;
+               background: white;
+               z-index: 100;
+               transform: translateX(-100%);
+               animation: load_center 1.5s ease-in-out ; 
            }
        }
         ///////////////////////////////////////////////
@@ -155,37 +174,9 @@ html{
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
-                z-index: -2;
-               
-                h1{
-                    text-align: center;
-                    font-size: 6rem;
-                    font-family: "Cookie";
-                    padding: 20px;
-                    margin: 15px;
-                    z-index: 1;
-                    opacity: 0.7;
-                }
-                .video-container{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    // .color-overlay {
-                    //     position: absolute;
-                    //     top: 0;
-                    //     left: 0;
-                    //     background-color: lightblue;
-                    //     width: 100%;
-                    //     height: 100vh;
-                    //     opacity: 0.3;
-                        img{
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                        }
-                }
+                // background: #130f40;
+                z-index: -2;  
+                
             }
             // main 
         main{
@@ -201,27 +192,17 @@ html{
             #home{
                 @extend #def;
                 position: relative;
-            //    @include flex(center);
-                // &::after{
-                //     content: '';
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     right: 0;
-                //     bottom: 0;
-                //     background-color:rgba(0, 0, 0,0.1);
-                //     height: 100vh;
-                //     z-index: 2;
-                // }
+                background: #130f40;
                 .home_name{
                     position: absolute;
                     top: 30%;
                     left: 30%;
                     z-index: 3;
                     padding: 15px;
-                    background: rgba(255,255,255,0.6);
+                    color: #f5f6fa;
+                    overflow: hidden;
+                    background: transparent;
                     .name{
-                       
                         font-size: 70px;
                     }
                 }
@@ -1038,5 +1019,41 @@ html{
     100%{
         transform: translateX(0);
         opacity: 1;
+    }
+}
+@keyframes load_top {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+        display: none;
+    }
+}
+@keyframes load_bottom {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(100%);
+        display: none;
+    }
+}
+@keyframes load_center {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+        display: none;
+    }
+}
+@keyframes load {
+    0%{
+        display: block;
+    }
+    100%{
+        display: none;
+        z-index: -2;
     }
 }
