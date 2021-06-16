@@ -1,50 +1,17 @@
 @media (min-width: 410px) and (max-width: 750px) {
-  html body .load {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 99;
-    top: 0;
-    width: 100%;
-    height: 50vh;
-    position: absolute;
-    z-index: 150;
+  html body {
+    width: 450px;
   }
-  html body .load .load_left {
-    right: 0;
-    background-color: #2d3436;
-  }
-  html body .navbar {
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: #636e72;
-  }
-  html body .navbar .nav_brand {
-    padding: 0 50px;
-  }
-  html body .navbar .menu_btn {
+  html body .menu_btn {
     width: 50px;
     height: 50px;
     margin-right: 33px;
     background-color: rgba(99, 110, 114, 0.5);
+    position: fixed;
+    top: 10px;
+    right: 10px;
   }
-  html body .navbar .menu_btn .btn {
+  html body .menu_btn .btn {
     position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -53,51 +20,51 @@
     width: 50px;
     height: 50px;
   }
-  html body .navbar .menu_btn .btn .btn_1 {
+  html body .menu_btn .btn .btn_1 {
     position: absolute;
-    width: 40px;
+    width: 35px;
     height: 3px;
     background: #f5f6fa;
     left: 5px;
-    top: 6px;
+    top: 13px;
     border-radius: 5px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-  html body .navbar .menu_btn .btn .btn_2 {
+  html body .menu_btn .btn .btn_2 {
     position: absolute;
-    width: 40px;
+    width: 35px;
     height: 3px;
     background: #f5f6fa;
     left: 5px;
-    top: 23px;
+    top: 25px;
     border-radius: 5px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-  html body .navbar .menu_btn .btn .btn_3 {
+  html body .menu_btn .btn .btn_3 {
     position: absolute;
-    width: 40px;
+    width: 35px;
     height: 3px;
     background: #f5f6fa;
     left: 5px;
-    top: 39px;
+    top: 37px;
     border-radius: 5px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-  html body .navbar .menu_btn .btn .show_1 {
-    -webkit-transform: translateY(17px) rotate(45deg);
-            transform: translateY(17px) rotate(45deg);
+  html body .menu_btn .btn .show_1 {
+    -webkit-transform: translateY(14px) rotate(45deg);
+            transform: translateY(14px) rotate(45deg);
   }
-  html body .navbar .menu_btn .btn .show_2 {
+  html body .menu_btn .btn .show_2 {
     -webkit-transform: translateX(-100%) !important;
             transform: translateX(-100%) !important;
     opacity: 0 !important;
   }
-  html body .navbar .menu_btn .btn .show_3 {
-    -webkit-transform: translateY(-16px) rotate(-45deg);
-            transform: translateY(-16px) rotate(-45deg);
+  html body .menu_btn .btn .show_3 {
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
   }
   html body .menu {
     -webkit-transform: translateX(-120%);
@@ -172,7 +139,7 @@
     opacity: 1 !important;
   }
   html body .section {
-    display: none;
+    background: url(../img/skill_bg.jpeg);
   }
   html body main {
     -webkit-box-orient: vertical;
@@ -209,7 +176,6 @@
     left: 10%;
     z-index: 3;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.6);
   }
   html body main #home .home_name .name {
     font-size: 30px;
@@ -406,7 +372,6 @@
         -ms-flex-align: center;
             align-items: center;
     height: 113vh;
-    background-color: white;
   }
   html body main #skill .skill_wrap {
     width: 100%;

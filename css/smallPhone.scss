@@ -25,6 +25,37 @@
             width: 100%;
             height: 70vh;
             overflow-x: hidden;
+            .load{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                z-index: 99;
+                animation: load 0.1s ease-in-out 3.7s forwards; 
+                .load_left{
+                    @include load();
+                    top: 0;
+                     transform: translateY(50%);
+                    animation: load_top 2s ease-in-out 0.5s forwards; 
+                }
+                .load_right{
+                    @include load();
+                    bottom: 0;
+                     transform: translateY(0);
+                    animation: load_bottom 2s ease-in-out 0.5s forwards; 
+                }
+                .load_center{
+                    position: absolute;
+                    top: 50vh;
+                    width: 100%;
+                    height: 2px;
+                    background: white;
+                    z-index: 100;
+                    transform: translateX(-100%);
+                    animation: load_center 1.5s ease-in-out ; 
+                }
+            }
             .menu{
                 left: -10px;
                 top: 30%;
@@ -36,7 +67,9 @@
                     }
                 }
             }
-          
+            .section{
+                background: url(../img/skill_bg.jpeg);
+            }
             main{
                 #def{
                     width: 100%;
@@ -156,7 +189,6 @@
                 #skill{
                     @include flex(space-around);
                     height: 113vh;
-                    background-color: white;
                     .skill_wrap{
                         width: 100%;
                         height: 88%;

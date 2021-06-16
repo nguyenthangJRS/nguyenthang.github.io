@@ -18,13 +18,6 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    @mixin load {
-        top: 0;
-        width: 100%;
-        height: 50vh;
-        position: absolute;
-        z-index: 150;
-    }
     @mixin skill($pacent) {
         width: $pacent;
         position: absolute;
@@ -45,7 +38,7 @@
     }
     @mixin btn($top) {
         position: absolute;
-        width: 40px;
+        width: 35px;
         height: 3px;
         background: #f5f6fa;
         left: 5px;
@@ -75,39 +68,18 @@
     }
     html{
         // margin: 0;
+        
         body{
-           .load{
-               position: relative;
-               top: 0;
-               left: 0;
-               height: 100vh;
-               width: 100%;
-               z-index: 99;
-               @include load();
-               .load_left{
-                    right: 0;
-                    background-color: #2d3436;
-               }
-           }
             ///////////////////////////////////////////////
-            .navbar{
-                width: 100%;
-                height: 60px;
-                position: fixed;
-                @include flex(space-between);
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 100;
-                background-color: #636e72;
-                .nav_brand{
-                    padding: 0 50px;
-                }
+            width: 450px;
                 .menu_btn{
                     width: 50px;
                     height: 50px;
                     margin-right: 33px;
                     background-color: rgba(99, 110, 114,0.5);;
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
                     .btn{
                         position: relative;
                         flex-direction: column;
@@ -116,13 +88,13 @@
                        @for $i from 1 to 4{
                            .btn_#{$i}{
                                @if($i == 1 ){
-                                @include btn(6px);
+                                @include btn(13px);
                                }
                                @if($i == 2 ){
-                                @include btn(23px);
+                                @include btn(25px);
                                }
                                @if($i == 3 ){
-                                @include btn(39px);
+                                @include btn(37px);
                                }
                            }
                        }
@@ -130,7 +102,7 @@
                        .show_#{$i}{
                         @if($i == 1 ){
                         //    transform-origin: center;
-                           transform: translateY(17px) rotate(45deg);
+                           transform: translateY(14px) rotate(45deg);
                            }
                            @if($i == 2 ){
                             transform: translateX(-100%) !important;
@@ -138,13 +110,13 @@
                            }
                            @if($i == 3 ){
                             // transform-origin: center;
-                            transform: translateY(-16px) rotate(-45deg);
+                            transform: translateY(-11px) rotate(-45deg);
                            }
                        }
                     }
                     }
                 }
-            }
+            
             ///////////////////////////////////////////////
             .menu{
                 transform: translateX(-120%);
@@ -180,10 +152,9 @@
                     }
                 }
             }
-            // .section
-                .section{
-                   display: none;
-                }
+            .section{
+                background: url(../img/skill_bg.jpeg);
+            }
                 // main 
             main{
                 flex-direction: column;
@@ -207,7 +178,6 @@
                         left: 10%;
                         z-index: 3;
                         padding: 15px;
-                        background: rgba(255,255,255,0.6);
                         .name{
                            
                             font-size: 30px;
@@ -354,7 +324,6 @@
                 #skill{
                     @include flex(space-around);
                     height: 113vh;
-                    background-color: white;
                     .skill_wrap{
                         width: 100%;
                         height: 88%;

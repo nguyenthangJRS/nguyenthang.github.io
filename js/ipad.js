@@ -255,48 +255,48 @@ if(window.innerWidth <410){
     })
     window.onscroll = () =>{
         let scroll = window.scrollY;
-        console.log(scroll)
+        // console.log(scroll)
 
 /////////////////////// about
         
-        about_title_phone.style.animation =  scroll < 224 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
-        about_img.style.animation =  scroll < 498 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
-        if(scroll > 755){
+        about_title_phone.style.animation =  scroll < 150 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+        about_img.style.animation =  scroll < 350 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
+        if(scroll > 640){
             for(let i = 0;i<list_about.length;i++){
-                list_about[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
+                list_about[i].style.animation = `list_about 1.6s ease-in-out ${0.2*i}s forwards`;
             }
         }
         // edu /////////////////////////////////
-        edu_title_phone.style.animation =  scroll < 1065 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
-        if(scroll > 1325){
+        edu_title_phone.style.animation =  scroll < 810 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+        if(scroll > 1155){
             for(let i = 0;i<edu_item.length;i++){
-                edu_item[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
+                edu_item[i].style.animation = `list_about 1.6s ease-in-out ${0.2*i}s forwards`;
             }
         }
         // skill//////////////////////////////////////
-        skill_title_phone.style.animation = scroll < 1976 ? `none` : `skill_title 1.2s ease-in-out 0.4s forwards`;
-        if(scroll>2095){
+        skill_title_phone.style.animation = scroll < 1590 ? `none` : `skill_title 1s ease-in-out 0.3s forwards`;
+        if(scroll>1875){
             skill_pacent.forEach(item =>{
-                item.style.animation = `skill_show 2s ease-in-out 0.5s forwards`;
+                item.style.animation = `skill_show 1s ease-in-out 0.5s forwards`;
             })
             skill_items.forEach(item =>{
-                item.style.animation = `skill_title 0.8s ease-in-out 0.5s forwards`;
+                item.style.animation = `skill_title 0.5s ease-in-out 0.5s forwards`;
             })
-            hyaku.style.animation  = `skill_title 0.8s ease-in-out 2s forwards`;
+            hyaku.style.animation  = `skill_title 0.5s ease-in-out 2s forwards`;
         }
         //////////////// portfolio
-        title_name.style.animation = scroll <2558 ? `none`:` span_title_1 2s ease-in-out  forwards`;
-        if(scroll>2714){
+        title_name.style.animation = scroll <2500 ? `none`:` span_title_1 2s ease-in-out  forwards`;
+        if(scroll>2650){
             for(let i = 0;i<port_items.length;i++){
-                port_items[i].style.animation = `work_img 1.3s ease-in-out ${0.6*i}s forwards`;
+                port_items[i].style.animation = `work_img 1s ease-in-out ${0.4*i}s forwards`;
             }
         }
         // contact //////////
-        contact.style.animation = scroll < 3690 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
-        span_1.style.animation = scroll < 3690 ? `none` : `span_title_1 0.7s ease-in-out 0.8s forwards`;
-        span_2.style.animation = scroll < 3690 ? `none` : `span_title_2 0.7s ease-in-out 1.5s forwards`;
-        local_adress.style.animation = scroll < 3890 ? `none` : `local_adress 1.5s ease-in-out 1s forwards`;
-        local_contact.style.animation = scroll < 3900 ? `none` : `local_adress 2.5s ease-in-out 1s forwards`;
+        contact.style.animation = scroll < 3530 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
+        span_1.style.animation = scroll < 3530 ? `none` : `span_title_1 0.7s ease-in-out 0.8s forwards`;
+        span_2.style.animation = scroll < 3530 ? `none` : `span_title_2 0.7s ease-in-out 1.5s forwards`;
+        local_adress.style.animation = scroll < 3700 ? `none` : `local_adress 1s ease-in-out 1s forwards`;
+        local_contact.style.animation = scroll < 3920 ? `none` : `local_adress 1s ease-in-out 1s forwards`;
 
         /////// menu color change/////////////////////////////////////////////////
         tag_li.forEach(item => {
@@ -325,3 +325,4 @@ if(window.innerWidth <410){
         })
     }
 }
+
