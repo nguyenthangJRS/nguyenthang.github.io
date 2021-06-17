@@ -304,22 +304,22 @@ if(window.innerWidth <410){
             if(tag_icon.classList.contains('add')){
                 tag_icon.classList.remove('add');
             }
-            if(scroll < 370){
+            if(scroll < 280){
                 item.classList.contains('item_1') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll >= 370){
+            if(scroll >= 280){
                 item.classList.contains('item_2') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll > 1387){
+            if(scroll > 1147){
                 item.classList.contains('item_3') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll > 2314){
+            if(scroll > 1714){
                 item.classList.contains('item_4') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll > 3260){
+            if(scroll > 2660){
                 item.classList.contains('item_5') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll > 4180){
+            if(scroll > 380){
                 item.classList.contains('item_6') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
         })
