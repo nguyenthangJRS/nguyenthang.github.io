@@ -36,7 +36,7 @@ const about_title_phone = document.querySelector('.about_title_phone');
 const edu_title_phone = document.querySelector('.edu_title_phone');
 const skill_title_phone = document.querySelector('.skill_title_phone');
 /////////////// home
-const home_name = document.querySelector('.home_name .name');
+const home_name = document.querySelector('.home_name .name ');
 const btn_1 = menu_btn.querySelector('.btn_1');
 const btn_2 = menu_btn.querySelector('.btn_2');
 const btn_3 = menu_btn.querySelector('.btn_3');

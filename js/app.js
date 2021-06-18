@@ -16,10 +16,10 @@ particlesJS('home',
 {
   "particles": {
     "number": {
-      "value": 170,
+      "value":90,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 400
       }
     },
     "color": {
@@ -28,16 +28,16 @@ particlesJS('home',
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 0.5,
+        "width": 1,
         "color": "#dfe6e9"
       },
       "polygon": {
         "nb_sides": 6
       },
       "image": {
-        "src": "",
-        "width": 100,
-        "height": 100
+        "src": "./img/nion.png",
+        "width": 50,
+        "height": 50
       }
     },
     "opacity": {
@@ -51,7 +51,7 @@ particlesJS('home',
       }
     },
     "size": {
-      "value": 1,
+      "value": 5,
       "random": false,
       "anim": {
         "enable": true,
@@ -61,7 +61,7 @@ particlesJS('home',
       }
     },
     "line_linked": {
-      "enable": true,
+      "enable": false,
       "distance": 150,
       "color": "#ffffff",
       "opacity": 0.4,
@@ -69,14 +69,14 @@ particlesJS('home',
     },
     "move": {
       "enable": true,
-      "speed": 3,
-      "direction": "center",
+      "speed": 1,
+      "direction": "top",
       "random": true,
       "straight": false,
-      "out_mode": "bounce",
+      "out_mode": "out",
       "attract": {
-        "enable": true,
-        "rotateX": 1000,
+        "enable": false,
+        "rotateX": 3000,
         "rotateY": 1500
       }
     }
