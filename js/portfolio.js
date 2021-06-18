@@ -61,7 +61,10 @@ const resize_about = (personal,about,about_img,list_about) => {
     personal.style.animation = `show_title 1.4s ease-in-out 0.6s forwards`;
     about_img.style.animation = `personal 0.7s ease-in-out 0.6s forwards`;
     for(let i = 0;i<list_about.length;i++){
-        list_about[i].style.animation = `list_about 1s ease-in-out ${0.25*i}s forwards`;
+        let scroll = window.innerWidth
+        if(scroll>570+i*25){
+            list_about[i].style.animation = `list_about 1s ease-in-out ${0.25*i}s forwards`;
+        }
     }
 
 }
@@ -125,7 +128,7 @@ if(window.screen.width>=1500){
         
     window.onscroll = () =>{
         let scroll = window.scrollY;
-        // console.log(scroll)
+        console.log(scroll)
 
 /////////////////////// about         
         if(scroll<500){

@@ -170,22 +170,26 @@ if(window.innerWidth >=410 && window.innerWidth <=749){
 /////////////////////// about
         
         about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
-        about_img.style.animation =  scroll < 417 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
-        if(scroll > 805){
+        about_img.style.animation =  scroll < 297 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
+        if(scroll > 760){
             for(let i = 0;i<list_about.length;i++){
-                list_about[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
+                if(scroll>760+i*35){
+                    list_about[i].style.animation = `list_about 0.8s ease-in-out ${0.3*i}s forwards`;
+                }
             }
         }
         // edu /////////////////////////////////
-        edu_title_phone.style.animation =  scroll < 1200 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
-        if(scroll > 1592){
+        edu_title_phone.style.animation =  scroll < 1250 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+        if(scroll > 1290){
             for(let i = 0;i<edu_item.length;i++){
-                edu_item[i].style.animation = `list_about 1.6s ease-in-out ${0.5*i}s forwards`;
+                if(scroll>1290+i*45){
+                    edu_item[i].style.animation = `list_about 0.8s ease-in-out ${0.3*i}s forwards`;
+                }
             }
         }
         // skill//////////////////////////////////////
-        skill_title_phone.style.animation = scroll < 2030 ? `none` : `skill_title 1.2s ease-in-out 0.4s forwards`;
-        if(scroll>2338){
+        skill_title_phone.style.animation = scroll < 1830 ? `none` : `skill_title 1.2s ease-in-out 0.4s forwards`;
+        if(scroll>2138){
             skill_pacent.forEach(item =>{
                 item.style.animation = `skill_show 2s ease-in-out 0.5s forwards`;
             })
@@ -195,18 +199,20 @@ if(window.innerWidth >=410 && window.innerWidth <=749){
             hyaku.style.animation  = `skill_title 0.8s ease-in-out 2s forwards`;
         }
         //////////////// portfolio
-        title_name.style.animation = scroll <2763 ? `none`:` span_title_1 2s ease-in-out  forwards`;
-        if(scroll>3054){
+        title_name.style.animation = scroll <2683 ? `none`:` span_title_1 2s ease-in-out  forwards`;
+        if(scroll>2793){
             for(let i = 0;i<port_items.length;i++){
-                port_items[i].style.animation = `work_img 1.3s ease-in-out ${0.6*i}s forwards`;
+                if(scroll>2793+i*100){
+                    port_items[i].style.animation = `work_img 1s ease-in-out ${0.6*i}s forwards`;
+                }
             }
         }
         // contact //////////
-        contact.style.animation = scroll < 3932 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
-        span_1.style.animation = scroll < 3932 ? `none` : `span_title_1 0.7s ease-in-out 1.5s forwards`;
-        span_2.style.animation = scroll < 3932 ? `none` : `span_title_2 0.7s ease-in-out 2.2s forwards`;
-        local_adress.style.animation = scroll < 4079 ? `none` : `local_adress 1.5s ease-in-out 2.5s forwards`;
-        local_contact.style.animation = scroll < 4150 ? `none` : `local_contact 2.5s ease-in-out 1.5s forwards`;
+        contact.style.animation = scroll < 3702 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
+        span_1.style.animation = scroll < 3702 ? `none` : `span_title_1 0.7s ease-in-out 1.5s forwards`;
+        span_2.style.animation = scroll < 3702 ? `none` : `span_title_2 0.7s ease-in-out 2.2s forwards`;
+        local_adress.style.animation = scroll < 3859 ? `none` : `local_adress 1s ease-in-out 0.5s forwards`;
+        local_contact.style.animation = scroll < 4100 ? `none` : `local_contact 1s ease-in-out 0.5s forwards`;
 
         /////// menu color change/////////////////////////////////////////////////
         tag_li.forEach(item => {
@@ -223,13 +229,13 @@ if(window.innerWidth >=410 && window.innerWidth <=749){
             if(scroll > 1447){
                 item.classList.contains('item_3') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll > 2324){
+            if(scroll > 2124){
                 item.classList.contains('item_4') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll > 3060){
+            if(scroll > 2760){
                 item.classList.contains('item_5') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
-            if(scroll > 4080){
+            if(scroll > 3780){
                 item.classList.contains('item_6') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
             }
         })
@@ -261,16 +267,20 @@ if(window.innerWidth <410){
         
         about_title_phone.style.animation =  scroll < 150 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
         about_img.style.animation =  scroll < 350 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
-        if(scroll > 640){
+        if(scroll > 600){
             for(let i = 0;i<list_about.length;i++){
-                list_about[i].style.animation = `list_about 1.6s ease-in-out ${0.2*i}s forwards`;
+                if(scroll>600+i*25){
+                    list_about[i].style.animation = `list_about 1s ease-in-out ${0.2*i}s forwards`;
+                }
             }
         }
         // edu /////////////////////////////////
-        edu_title_phone.style.animation =  scroll < 810 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
-        if(scroll > 1155){
+        edu_title_phone.style.animation =  scroll < 900 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+        if(scroll > 1000){
             for(let i = 0;i<edu_item.length;i++){
-                edu_item[i].style.animation = `list_about 1.6s ease-in-out ${0.2*i}s forwards`;
+                if(scroll>1000+i*105){
+                    edu_item[i].style.animation = `list_about 1s ease-in-out ${0.2*i}s forwards`;
+                }
             }
         }
         // skill//////////////////////////////////////
@@ -288,7 +298,9 @@ if(window.innerWidth <410){
         title_name.style.animation = scroll <2500 ? `none`:` span_title_1 2s ease-in-out  forwards`;
         if(scroll>2650){
             for(let i = 0;i<port_items.length;i++){
-                port_items[i].style.animation = `work_img 1s ease-in-out ${0.4*i}s forwards`;
+                if(scroll>2650+i*125){
+                    port_items[i].style.animation = `work_img 1s ease-in-out ${0.4*i}s forwards`;
+                }
             }
         }
         // contact //////////

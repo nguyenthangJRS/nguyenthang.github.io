@@ -1,15 +1,12 @@
 @media (min-width: 410px) and (max-width: 750px) {
-  html body {
-    width: 450px;
-  }
   html body .menu_btn {
     width: 50px;
     height: 50px;
-    margin-right: 33px;
-    background-color: rgba(99, 110, 114, 0.5);
+    background-color: #273c75;
     position: fixed;
     top: 10px;
-    right: 10px;
+    left: 10px;
+    z-index: 100;
   }
   html body .menu_btn .btn {
     position: relative;
@@ -17,16 +14,16 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   html body .menu_btn .btn .btn_1 {
     position: absolute;
     width: 35px;
     height: 3px;
     background: #f5f6fa;
-    left: 5px;
-    top: 13px;
+    left: 8px;
+    top: 12px;
     border-radius: 5px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -36,8 +33,8 @@
     width: 35px;
     height: 3px;
     background: #f5f6fa;
-    left: 5px;
-    top: 25px;
+    left: 8px;
+    top: 24px;
     border-radius: 5px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -47,15 +44,15 @@
     width: 35px;
     height: 3px;
     background: #f5f6fa;
-    left: 5px;
-    top: 37px;
+    left: 8px;
+    top: 36px;
     border-radius: 5px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
   html body .menu_btn .btn .show_1 {
-    -webkit-transform: translateY(14px) rotate(45deg);
-            transform: translateY(14px) rotate(45deg);
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
   }
   html body .menu_btn .btn .show_2 {
     -webkit-transform: translateX(-100%) !important;
@@ -63,8 +60,8 @@
     opacity: 0 !important;
   }
   html body .menu_btn .btn .show_3 {
-    -webkit-transform: translateY(-11px) rotate(-45deg);
-            transform: translateY(-11px) rotate(-45deg);
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+            transform: translateY(-13px) rotate(-45deg);
   }
   html body .menu {
     -webkit-transform: translateX(-120%);
@@ -173,7 +170,7 @@
   html body main #home .home_name {
     position: absolute;
     top: 43%;
-    left: 10%;
+    left: 23%;
     z-index: 3;
     padding: 15px;
   }
@@ -183,7 +180,7 @@
   html body main #home .home_1 {
     position: absolute;
     top: 66%;
-    left: 16%;
+    left: 26%;
     width: 290px;
     height: 60px;
     z-index: 3;
@@ -232,7 +229,7 @@
     height: 25px;
   }
   html body main #about {
-    height: 146vh;
+    height: 115vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -317,7 +314,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 105vh;
+    height: 65vh;
   }
   html body main #education .edu_wrap {
     width: 100%;
@@ -371,7 +368,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 113vh;
+    height: 95vh;
   }
   html body main #skill .skill_wrap {
     width: 100%;
@@ -481,13 +478,13 @@
     margin: 80px 0;
   }
   html body main #portfolio .port_wrap .content .port_list {
-    margin-left: -35px;
+    margin-left: -25px;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items {
     margin-top: 40px;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items img {
-    width: 146px;
+    width: 226px;
     height: 154px;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content {
@@ -508,7 +505,7 @@
     width: 60px;
   }
   html body main #contact {
-    min-height: 147vh;
+    min-height: 110vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -518,6 +515,9 @@
         -ms-flex-align: center;
             align-items: center;
     z-index: 0;
+  }
+  html body main #contact .span span:nth-child(1) {
+    font-size: 30px;
   }
   html body main #contact .contact_area {
     display: -webkit-box;
@@ -545,7 +545,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: -100px;
+    margin-top: -50px;
   }
   html body main #contact .contact_area .local_adress .adress {
     display: -webkit-box;
@@ -563,10 +563,10 @@
     width: 250px;
   }
   html body main #contact .contact_area .local_adress .adress .adress_info p {
-    font-size: 22px;
+    font-size: 16px;
   }
   html body main #contact .contact_area .local_adress .adress .adress_info span {
-    font-size: 15px;
+    font-size: 12px;
   }
   html body main #contact .contact_area .local_adress .adress + .adress {
     margin-top: 35px;
@@ -628,6 +628,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: -30px;
   }
   html body footer .footer_contact .ft_list {
     display: -webkit-box;

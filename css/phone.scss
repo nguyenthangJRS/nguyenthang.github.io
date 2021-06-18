@@ -41,7 +41,7 @@
         width: 35px;
         height: 3px;
         background: #f5f6fa;
-        left: 5px;
+        left: 8px;
         top: $top;
         border-radius: 5px;
         transition: all 0.4s ease-in-out;
@@ -71,51 +71,50 @@
         
         body{
             ///////////////////////////////////////////////
-            width: 450px;
-                .menu_btn{
-                    width: 50px;
-                    height: 50px;
-                    margin-right: 33px;
-                    background-color: rgba(99, 110, 114,0.5);;
-                    position: fixed;
-                    top: 10px;
-                    right: 10px;
-                    .btn{
-                        position: relative;
-                        flex-direction: column;
-                        width: 50px;
-                        height: 50px;
-                       @for $i from 1 to 4{
-                           .btn_#{$i}{
-                               @if($i == 1 ){
-                                @include btn(13px);
-                               }
-                               @if($i == 2 ){
-                                @include btn(25px);
-                               }
-                               @if($i == 3 ){
-                                @include btn(37px);
-                               }
-                           }
-                       }
-                       @for $i from 1 to 4{
-                       .show_#{$i}{
-                        @if($i == 1 ){
-                        //    transform-origin: center;
-                           transform: translateY(14px) rotate(45deg);
+            .menu_btn{
+                width: 50px;
+                height: 50px;
+                background-color: rgba(39, 60, 117,1.0);
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 100;
+                .btn{
+                    position: relative;
+                    flex-direction: column;
+                    width: 40px;
+                    height: 40px;
+                   @for $i from 1 to 4{
+                       .btn_#{$i}{
+                           @if($i == 1 ){
+                            @include btn(12px);
                            }
                            @if($i == 2 ){
-                            transform: translateX(-100%) !important;
-                            opacity: 0 !important;
+                            @include btn(24px);
                            }
-                           @if($i == 3 ){
-                            // transform-origin: center;
-                            transform: translateY(-11px) rotate(-45deg);
+                           @if($i == 3){
+                            @include btn(36px);
                            }
                        }
-                    }
-                    }
+                   }
+                   @for $i from 1 to 4{
+                   .show_#{$i}{
+                    @if($i == 1 ){
+                    //    transform-origin: center;
+                       transform: translateY(11px) rotate(45deg);
+                       }
+                       @if($i == 2 ){
+                        transform: translateX(-100%) !important;
+                        opacity: 0 !important;
+                       }
+                       @if($i == 3 ){
+                        // transform-origin: center;
+                        transform: translateY(-13px) rotate(-45deg);
+                       }
+                   }
                 }
+                }
+            }
             
             ///////////////////////////////////////////////
             .menu{
@@ -175,7 +174,7 @@
                     .home_name{
                         position: absolute;
                         top: 43%;
-                        left: 10%;
+                        left: 23%;
                         z-index: 3;
                         padding: 15px;
                         .name{
@@ -186,7 +185,7 @@
                     .home_1{
                         position: absolute;
                         top: 66%;
-                        left: 16%;
+                        left: 26%;
                         width: 290px;
                         height: 60px;
                         z-index: 3;
@@ -230,7 +229,7 @@
                 }
                 #about{
                     @extend #def;
-                    height: 146vh;
+                    height: 115vh;
                     @include flex(space-around);
                     background-color: white;
                     flex-direction: column;
@@ -286,7 +285,7 @@
                     @extend #def;
                     background-color: black;
                     display: flex;
-                    height: 105vh;
+                    height: 65vh;
                     .edu_wrap{
                         width: 100%;
                         @include flex(space-around);
@@ -323,7 +322,7 @@
     
                 #skill{
                     @include flex(space-around);
-                    height: 113vh;
+                    height: 95vh;
                     .skill_wrap{
                         width: 100%;
                         height: 88%;
@@ -399,12 +398,12 @@
                         .content{
                             margin: 80px 0;
                             .port_list{
-                                margin-left: -35px;
+                                margin-left: -25px;
                                 .port_items{
                                     margin-top: 40px;
                                     // opacity: 0; 
                                     img{
-                                        width: 146px;
+                                        width: 226px;
                                         height: 154px;
                                        
                                     }
@@ -434,26 +433,31 @@
     
                 #contact{
                     @extend #def;
-                    min-height: 147vh;
+                    min-height: 110vh;
                     @include flex(space-around);
                     z-index: 0;
+                    .span{
+                        span:nth-child(1){
+                            font-size: 30px
+                        }
+                    }
                     .contact_area{
                         @include flex(center);
                         flex-direction: column;
                         width: 100%;
                         .local_adress{
                             @include flex(space-between);                        
-                            margin-top: -100px;
+                            margin-top: -50px;
                             .adress{
                                 @include flex(flex-start);
                                 .adress_info{
                                     padding-left: 15px;
                                     width: 250px;
                                     p{
-                                        font-size: 22px;
+                                        font-size: 16px;
                                     }
                                     span{
-                                        font-size: 15px;
+                                        font-size: 12px;
                                     }
                                 }
                                 &+.adress{
@@ -498,6 +502,7 @@
                 }
                 .footer_contact{
                     @include flex(center);
+                    margin-left: -30px;
                     .ft_list{
                         @include flex(center);
                         .ft_link{
