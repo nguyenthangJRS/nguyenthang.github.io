@@ -174,7 +174,7 @@ if(window.innerWidth >=410 && window.innerWidth <=749){
         if(scroll > 760){
             for(let i = 0;i<list_about.length;i++){
                 if(scroll>760+i*35){
-                    list_about[i].style.animation = `list_about 0.8s ease-in-out ${0.3*i}s forwards`;
+                    list_about[i].style.animation = `list_about 0.8s ease-in-out ${0.12*i}s forwards`;
                 }
             }
         }
@@ -183,7 +183,7 @@ if(window.innerWidth >=410 && window.innerWidth <=749){
         if(scroll > 1290){
             for(let i = 0;i<edu_item.length;i++){
                 if(scroll>1290+i*45){
-                    edu_item[i].style.animation = `list_about 0.8s ease-in-out ${0.3*i}s forwards`;
+                    edu_item[i].style.animation = `list_about 0.8s ease-in-out ${0.12*i}s forwards`;
                 }
             }
         }
@@ -203,7 +203,7 @@ if(window.innerWidth >=410 && window.innerWidth <=749){
         if(scroll>2793){
             for(let i = 0;i<port_items.length;i++){
                 if(scroll>2793+i*100){
-                    port_items[i].style.animation = `work_img 1s ease-in-out ${0.6*i}s forwards`;
+                    port_items[i].style.animation = `work_img 1s ease-in-out ${0.12*i}s forwards`;
                 }
             }
         }
@@ -270,7 +270,7 @@ if(window.innerWidth <410){
         if(scroll > 600){
             for(let i = 0;i<list_about.length;i++){
                 if(scroll>600+i*25){
-                    list_about[i].style.animation = `list_about 1s ease-in-out ${0.2*i}s forwards`;
+                    list_about[i].style.animation = `list_about 1s ease-in-out ${0.1*i}s forwards`;
                 }
             }
         }
@@ -279,7 +279,7 @@ if(window.innerWidth <410){
         if(scroll > 1000){
             for(let i = 0;i<edu_item.length;i++){
                 if(scroll>1000+i*105){
-                    edu_item[i].style.animation = `list_about 1s ease-in-out ${0.2*i}s forwards`;
+                    edu_item[i].style.animation = `list_about 1s ease-in-out ${0.1*i}s forwards`;
                 }
             }
         }
@@ -299,7 +299,7 @@ if(window.innerWidth <410){
         if(scroll>2650){
             for(let i = 0;i<port_items.length;i++){
                 if(scroll>2650+i*125){
-                    port_items[i].style.animation = `work_img 1s ease-in-out ${0.4*i}s forwards`;
+                    port_items[i].style.animation = `work_img 1s ease-in-out ${0.1*i}s forwards`;
                 }
             }
         }
