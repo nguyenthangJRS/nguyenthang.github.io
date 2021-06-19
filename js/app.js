@@ -51,7 +51,11 @@ particlesJS('home',
       }
     },
     "size": {
+<<<<<<< HEAD
       "value": 5,
+=======
+      "value": 4,
+>>>>>>> 9560c200a0475f322fe873e6aa4d198127d3431c
       "random": false,
       "anim": {
         "enable": true,
@@ -69,7 +73,11 @@ particlesJS('home',
     },
     "move": {
       "enable": true,
+<<<<<<< HEAD
       "speed": 1,
+=======
+      "speed": 3,
+>>>>>>> 9560c200a0475f322fe873e6aa4d198127d3431c
       "direction": "top",
       "random": true,
       "straight": false,
