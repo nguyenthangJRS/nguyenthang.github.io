@@ -125,10 +125,12 @@
             ///////////////////////////////////////////////
             .menu{
                 transform: translateX(-120%);
-                background-color: grey;
+                background-color: rgba(87, 101, 116,0.8);
                 width: 274px;
-                top: 40%;
+                top: 28%;
                 left: -100px;
+                box-shadow: 3px 5px 15px rgba(0,0,0,0.7);
+                border-radius: 5px;
 
                 @keyframes fade_menu {
                     0%{
@@ -208,12 +210,6 @@
                             animation: port_items 1s ease-in-out 3.5s forwards;
                         }
                         .home_contact{
-                            list-style: none;
-                            display: flex;
-                            margin: 5px 0;
-                            align-items: center;
-                            animation : border_left 1s ease-in-out 3s forwards;
-                            margin-left: -30px;
                             .home_items{
                                 margin-right: 10px;
                                 animation : home_item 1s ease-in-out 3s forwards;

@@ -69,10 +69,13 @@
   html body .menu {
     -webkit-transform: translateX(-120%);
             transform: translateX(-120%);
-    background-color: grey;
+    background-color: rgba(87, 101, 116, 0.8);
     width: 274px;
-    top: 40%;
+    top: 28%;
     left: -100px;
+    -webkit-box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.7);
+            box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
   }
   @-webkit-keyframes fade_menu {
     0% {
@@ -200,19 +203,6 @@
             transform: translateX(-100%);
     -webkit-animation: port_items 1s ease-in-out 3.5s forwards;
             animation: port_items 1s ease-in-out 3.5s forwards;
-  }
-  html body main #home .home_1 .home_contact {
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 5px 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-animation: border_left 1s ease-in-out 3s forwards;
-            animation: border_left 1s ease-in-out 3s forwards;
-    margin-left: -30px;
   }
   html body main #home .home_1 .home_contact .home_items {
     margin-right: 10px;

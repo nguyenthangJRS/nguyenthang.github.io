@@ -261,8 +261,8 @@ html body main #home .home_1 .home_item_border {
   bottom: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-animation: port_items 1s ease-in-out 0.5s forwards;
-          animation: port_items 1s ease-in-out 0.5s forwards;
+  -webkit-animation: port_items 1s ease-in-out 3.5s forwards;
+          animation: port_items 1s ease-in-out 3.5s forwards;
 }
 
 html body main #home .home_1 .home_contact {
@@ -274,9 +274,10 @@ html body main #home .home_1 .home_contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: border_left 1s ease-in-out forwards;
-          animation: border_left 1s ease-in-out forwards;
+  -webkit-animation: port_img 1s ease-in-out 2.5s forwards;
+          animation: port_img 1s ease-in-out 2.5s forwards;
   margin-left: -30px;
+  opacity: 0;
 }
 
 html body main #home .home_1 .home_contact .home_items {

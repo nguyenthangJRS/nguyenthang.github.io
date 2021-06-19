@@ -229,15 +229,16 @@ html{
                         left: 0;
                         bottom: 0;
                         transform: translateX(-100%);
-                        animation: port_items 1s ease-in-out 0.5s forwards;
+                        animation: port_items 1s ease-in-out 3.5s forwards;
                     }
                     .home_contact{
                         list-style: none;
                         display: flex;
                         margin: 5px 0;
                         align-items: center;
-                        animation : border_left 1s ease-in-out forwards;
+                        animation : port_img 1s ease-in-out 2.5s forwards;
                         margin-left: -30px;
+                        opacity: 0;
                       
                         .home_items{
                             margin-right: 10px;
