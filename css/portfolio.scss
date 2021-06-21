@@ -60,6 +60,22 @@ html{
     box-sizing: border-box;
     body{
         position: relative;
+        overflow-x: hidden;
+        // cursor: none;
+        .pointer{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            z-index: 100;
+            transition: all 0.05s;
+            pointer-events: none;
+            border-radius: 50%;
+            mix-blend-mode: difference;
+        }
        .load{
            position: absolute;
            top: 0;
@@ -192,12 +208,14 @@ html{
                 width: 100%;
                 height: 100vh;
                 font-size: 40px;
-                text-align: center
+                text-align: center;
             }
             #home{
+                overflow: hidden;
                 @extend #def;
                 position: relative;
                 background: #130f40;
+                z-index: 1;
                 .home_name{
                     position: absolute;
                     top: 30%;
@@ -205,11 +223,11 @@ html{
                     z-index: 3;
                     padding: 15px;
                     color: #f5f6fa;
-                    // overflow: hidden;
                     // background: transparent;
                     display: flex;
                     .name{
                         font-size: 70px;
+                        text-shadow: 5px 10px 15px rgba(255,255,255,0.9);
                     }
                 }
                 .home_1{
@@ -264,14 +282,14 @@ html{
                     }
                 }
             }
-
-
             #about{
                 @extend #def;
+                overflow: hidden;
                 height: 100vh;
                 @include flex(space-around);
                 background-color: white;
                 flex-direction: column;
+                position: relative;
                 margin-top: 0;
                 .about_wrap{
                     display: flex;
@@ -280,6 +298,7 @@ html{
                     justify-content: flex-start;
                     position: relative;
                     flex-wrap: wrap;
+                    z-index: 1;
                     .about_title_phone{
                         display: none;
                     }
@@ -328,11 +347,29 @@ html{
                         }
                     }
                 }
+                .bubble{
+                    position: absolute;
+                    z-index: 0;
+                }
+                .bubble_1{
+                    top: 8%;
+                    left: 68%;
+                }
+                .bubble_2{
+                    top: 58%;
+                    left: 46%;
+                }
+                .bubble_3{
+                    top: 18%;
+                    left: 94%;
+                }
             }
             #education{
+                overflow: hidden;
                 @extend #def;
                 background-color: black;
                 display: flex;
+                z-index: 1;
                 .edu_wrap{
                     width: 100%;
                     @include flex(space-around);
@@ -390,6 +427,7 @@ html{
             }
 
             #skill{
+                overflow: hidden;
                 @include flex(space-around);
                 width: 100%;
                 height: 100vh;
@@ -493,6 +531,7 @@ html{
                 }
             }
                 #portfolio{
+                    overflow: hidden;
                     width: 100%;
                     min-height: 100vh ;
                     background: black;
@@ -599,6 +638,7 @@ html{
 
 
             #contact{
+                overflow: hidden;
                 background-color: white;
                 @extend #def;
                 height: 70vh;
@@ -726,6 +766,7 @@ html{
             }
         }
         footer{
+            overflow: hidden;
             min-height: 30vh;
             width: 100%;
             background-color: rgba(223, 230, 233,1.0);

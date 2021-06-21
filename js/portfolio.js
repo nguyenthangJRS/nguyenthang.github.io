@@ -41,6 +41,7 @@ const btn_1 = menu_btn.querySelector('.btn_1');
 const btn_2 = menu_btn.querySelector('.btn_2');
 const btn_3 = menu_btn.querySelector('.btn_3');
 const bg_menu = document.querySelector('.bg_menu');
+const pointer = document.querySelector('.pointer');
 
 
 let  bg_flag = false;
@@ -110,6 +111,13 @@ const resize_contact_0 = (contact,span_1,span_2) => {
     span_2.style.animation = `none`;
 }
 
+
+document.addEventListener('mousemove',function(e){
+    let x = e.pageX;
+    let y = e.pageY;
+    pointer.style.top = `${y}px`;
+    pointer.style.left = `${x}px`;
+})
 if(window.screen.width>=1500){
     menu.forEach(item => {
             item.onmouseenter = (event)=>{
@@ -125,11 +133,10 @@ if(window.screen.width>=1500){
                 span_menu.style.opacity = 0
             }
         })
-        
     window.onscroll = () =>{
         let scroll = window.scrollY;
-        console.log(scroll)
-
+        
+        // console.log(scroll)
 /////////////////////// about         
         if(scroll<500){
             personal.style.animation = `none`;  
@@ -265,6 +272,5 @@ const show_name = () => {
   
     console.log(home_name.nextElementSibling)
 }
-
-// const time_name = setTimeout(show_name(),6000)
-show_name()
+show_name();
+/////////////onmousemovie //////////////////////

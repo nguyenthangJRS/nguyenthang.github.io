@@ -7,9 +7,27 @@ html {
 
 html body {
   position: relative;
+  overflow-x: hidden;
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+}
+
+html body .pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 100;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: difference;
 }
 
 html body .load {
@@ -222,8 +240,10 @@ html body main #def, html body main #home, html body main #about, html body main
 }
 
 html body main #home {
+  overflow: hidden;
   position: relative;
   background: #130f40;
+  z-index: 1;
 }
 
 html body main #home .home_name {
@@ -240,6 +260,7 @@ html body main #home .home_name {
 
 html body main #home .home_name .name {
   font-size: 70px;
+  text-shadow: 5px 10px 15px rgba(255, 255, 255, 0.9);
 }
 
 html body main #home .home_1 {
@@ -309,6 +330,7 @@ html body main #home .home_1 .home_contact .home_items .home_link:hover {
 }
 
 html body main #about {
+  overflow: hidden;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,6 +345,7 @@ html body main #about {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   margin-top: 0;
 }
 
@@ -338,6 +361,7 @@ html body main #about .about_wrap {
   position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  z-index: 1;
 }
 
 html body main #about .about_wrap .about_title_phone {
@@ -418,11 +442,33 @@ html body main #about .about_wrap .about_content .detail p {
   margin: 30px 10px;
 }
 
+html body main #about .bubble {
+  position: absolute;
+  z-index: 0;
+}
+
+html body main #about .bubble_1 {
+  top: 8%;
+  left: 68%;
+}
+
+html body main #about .bubble_2 {
+  top: 58%;
+  left: 46%;
+}
+
+html body main #about .bubble_3 {
+  top: 18%;
+  left: 94%;
+}
+
 html body main #education {
+  overflow: hidden;
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1;
 }
 
 html body main #education .edu_wrap {
@@ -516,6 +562,7 @@ html body main #education .edu_wrap .edu_content .edu_list .edu_items p {
 }
 
 html body main #skill {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -823,6 +870,7 @@ html body main #skill .skill_wrap .skill_content .hyaku {
 }
 
 html body main #portfolio {
+  overflow: hidden;
   width: 100%;
   min-height: 100vh;
   background: black;
@@ -994,6 +1042,7 @@ html body main #portfolio .port_wrap .content .port_list .port_items .items_cont
 }
 
 html body main #contact {
+  overflow: hidden;
   background-color: white;
   height: 70vh;
   display: -webkit-box;
@@ -1232,6 +1281,7 @@ html body main #contact .contact_area .local_contact form button:hover {
 }
 
 html body footer {
+  overflow: hidden;
   min-height: 30vh;
   width: 100%;
   background-color: #dfe6e9;
