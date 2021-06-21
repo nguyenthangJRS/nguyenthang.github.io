@@ -60,12 +60,12 @@ html{
     box-sizing: border-box;
     body{
         position: relative;
-        overflow-x: hidden;
+        // overflow-x: hidden;
         // cursor: none;
         .pointer{
             position: absolute;
-            top: 50%;
-            left: 50%;
+            // top: 50%;
+            // left: 50%;
             width: 200px;
             height: 200px;
             transform: translate(-50%,-50%);
@@ -352,16 +352,14 @@ html{
                     z-index: 0;
                 }
                 .bubble_1{
-                    top: 8%;
-                    left: 68%;
+                    top: 15%;
+                    left: 60%;
+                    opacity: 0;
                 }
                 .bubble_2{
                     top: 58%;
                     left: 46%;
-                }
-                .bubble_3{
-                    top: 18%;
-                    left: 94%;
+                    opacity: 0;
                 }
             }
             #education{

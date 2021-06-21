@@ -42,6 +42,8 @@ const btn_2 = menu_btn.querySelector('.btn_2');
 const btn_3 = menu_btn.querySelector('.btn_3');
 const bg_menu = document.querySelector('.bg_menu');
 const pointer = document.querySelector('.pointer');
+const bubble_1 = document.querySelector('.bubble_1');
+const bubble_2 = document.querySelector('.bubble_2');
 
 
 let  bg_flag = false;
@@ -118,159 +120,167 @@ document.addEventListener('mousemove',function(e){
     pointer.style.top = `${y}px`;
     pointer.style.left = `${x}px`;
 })
-if(window.screen.width>=1500){
-    menu.forEach(item => {
-            item.onmouseenter = (event)=>{
-                const items_menu = event.target;
-                const span_menu = items_menu.parentNode.querySelector('span')
-                span_menu.style.transform = `translateY(${0})`
-                span_menu.style.opacity = 1
-            }
-            item.onmouseleave = (e)=>{
-                const items_menu = e.target;
-                const span_menu = items_menu.parentNode.querySelector('span')
-                span_menu.style.transform = `translateY(${-10}px)`
-                span_menu.style.opacity = 0
-            }
-        })
-    window.onscroll = () =>{
-        let scroll = window.scrollY;
-        
-        // console.log(scroll)
-/////////////////////// about         
-        if(scroll<500){
-            personal.style.animation = `none`;  
-        }
-        else{
-            resize_about(personal,about,about_img,list_about);
-        }
-        // edu /////////////////////////////////
-        if(scroll<1500){
-            edu_title.style.animation = `none`;
-        }
-        else{
-            resize_edu(edu_title,edu,edu_img,edu_item);
-        }
-        // skill//////////////////////////////////////
-        if(scroll<2350){
-            skill_img.style.animation = `none`;
-        }
-       else{
-            resize_skill_1(skill_img,skill_title);
-        }
-        if(scroll>2700){
-            resize_skill_2(skill_items,skill_pacent,hyaku);
-        }
-        //////////////// portfolio
-        if(scroll<3350){
-            title_name.style.animation = `none`;
-        }
-        else{
-            resize_pofolio(title_name,port_img,port_title,port_items,'show_port');
-        }
-        // contact //////////
-        if(scroll< 4450){
-            resize_contact_0(contact,span_1,span_2)
-        }else{
-            resize_contact(contact,span_1,span_2,local_adress,local_contact);
-        }
-        /////// menu color change/////////////////////////////////////////////////
-        tag_li.forEach(item => {
-            const tag_icon = item.querySelector('a')
-            if(tag_icon.classList.contains('add')){
-                tag_icon.classList.remove('add');
-            }
-            if(scroll < 581){
-                item.classList.contains('item_1') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-            }
-            if(scroll >= 581){
-                item.classList.contains('item_2') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-            }
-            if(scroll > 1550){
-                item.classList.contains('item_3') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-            }
-            if(scroll > 2519){
-                item.classList.contains('item_4') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-            }
-            if(scroll > 3488){
-                item.classList.contains('item_5') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-            }
-            if(scroll > 4651){
-                item.classList.contains('item_6') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-            }
-        })
-    }
-}
-//////////////////////////////////// menu btn
-let flag = false;
-const check_menu = (flag) => {
-    if(flag){
-        btn_1.classList.add('show_1')
-        btn_2.classList.add('show_2')
-        btn_3.classList.add('show_3')
-        fade_menu.style.animation = `fade_menu 0.7s ease-in-out forwards`;
-    }else{
-        fade_menu.style.animation = `none`;
-        if( btn_1.classList.contains('show_1')){
-            btn_1.classList.remove('show_1')
-        }
-        if( btn_2.classList.contains('show_2')){
-            btn_2.classList.remove('show_2')
-        }
-        if( btn_3.classList.contains('show_3')){
-            btn_3.classList.remove('show_3')
-        }
-    }
-}
-
-menu_btn.onclick = () =>{
-    flag = !flag 
-    bg_flag = !bg_flag;
-    check_bg();
-    check_menu(flag);
-    
-}
-menu.forEach(nav => {
-    nav.onclick = (e) => {
-        bg_flag =false;
-        check_bg();
-        flag =false;
-        check_menu(flag);
-        fade_menu.style.animation = `none`;
-        flag = false;
-        if( btn_1.classList.contains('show_1')){
-            btn_1.classList.remove('show_1')
-        }
-        if( btn_2.classList.contains('show_2')){
-            btn_2.classList.remove('show_2')
-        }
-        if( btn_3.classList.contains('show_3')){
-            btn_3.classList.remove('show_3')
-        }
-        console.log(flag)
-    }
-})
-
-// first load
-let myName = 'NGUYEN TIEP THANG'
-let show = []
-let text = '';
-
-const show_name = () => {
-    const c = setTimeout(()=>{
-        for(let i = 0;i<myName.length;i++){
-            const time = setTimeout(() => {
-                let x = myName.charAt(i)
-                show.push(x)
-                text += show[i]
-                home_name.textContent = `${text}`
-                // console.log(text)
-            },i*130)
-        }
-    },3100)
+window.onload = () => {
    
-  
-    console.log(home_name.nextElementSibling)
+
+    if(window.screen.width>=1500){
+        menu.forEach(item => {
+                item.onmouseenter = (event)=>{
+                    const items_menu = event.target;
+                    const span_menu = items_menu.parentNode.querySelector('span')
+                    span_menu.style.transform = `translateY(${0})`
+                    span_menu.style.opacity = 1
+                }
+                item.onmouseleave = (e)=>{
+                    const items_menu = e.target;
+                    const span_menu = items_menu.parentNode.querySelector('span')
+                    span_menu.style.transform = `translateY(${-10}px)`
+                    span_menu.style.opacity = 0
+                }
+            })
+        window.onscroll = () =>{
+            let scroll = window.scrollY;
+            console.log(scroll)
+/////////////////////// about 
+            if(scroll > 650){
+                bubble_1.style.animation = `list_about 1s ease-in-out forwards`;
+                bubble_2.style.animation = `local_adress 1s ease-in-out forwards`;
+            }   
+///////////////////////////////////     
+            if(scroll<500){
+                personal.style.animation = `none`;  
+            }
+            else{
+                resize_about(personal,about,about_img,list_about);
+            }
+            // edu /////////////////////////////////
+            if(scroll<1500){
+                edu_title.style.animation = `none`;
+            }
+            else{
+                resize_edu(edu_title,edu,edu_img,edu_item);
+            }
+            // skill//////////////////////////////////////
+            if(scroll<2350){
+                skill_img.style.animation = `none`;
+            }
+           else{
+                resize_skill_1(skill_img,skill_title);
+            }
+            if(scroll>2700){
+                resize_skill_2(skill_items,skill_pacent,hyaku);
+            }
+            //////////////// portfolio
+            if(scroll<3350){
+                title_name.style.animation = `none`;
+            }
+            else{
+                resize_pofolio(title_name,port_img,port_title,port_items,'show_port');
+            }
+            // contact //////////
+            if(scroll< 4450){
+                resize_contact_0(contact,span_1,span_2)
+            }else{
+                resize_contact(contact,span_1,span_2,local_adress,local_contact);
+            }
+            /////// menu color change/////////////////////////////////////////////////
+            tag_li.forEach(item => {
+                const tag_icon = item.querySelector('a')
+                if(tag_icon.classList.contains('add')){
+                    tag_icon.classList.remove('add');
+                }
+                if(scroll < 581){
+                    item.classList.contains('item_1') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
+                }
+                if(scroll >= 581){
+                    item.classList.contains('item_2') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
+                }
+                if(scroll > 1550){
+                    item.classList.contains('item_3') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
+                }
+                if(scroll > 2519){
+                    item.classList.contains('item_4') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
+                }
+                if(scroll > 3488){
+                    item.classList.contains('item_5') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
+                }
+                if(scroll > 4651){
+                    item.classList.contains('item_6') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
+                }
+            })
+        }
+    }
+    //////////////////////////////////// menu btn
+    let flag = false;
+    const check_menu = (flag) => {
+        if(flag){
+            btn_1.classList.add('show_1')
+            btn_2.classList.add('show_2')
+            btn_3.classList.add('show_3')
+            fade_menu.style.animation = `fade_menu 0.7s ease-in-out forwards`;
+        }else{
+            fade_menu.style.animation = `none`;
+            if( btn_1.classList.contains('show_1')){
+                btn_1.classList.remove('show_1')
+            }
+            if( btn_2.classList.contains('show_2')){
+                btn_2.classList.remove('show_2')
+            }
+            if( btn_3.classList.contains('show_3')){
+                btn_3.classList.remove('show_3')
+            }
+        }
+    }
+    
+    menu_btn.onclick = () =>{
+        flag = !flag 
+        bg_flag = !bg_flag;
+        check_bg();
+        check_menu(flag);
+        
+    }
+    menu.forEach(nav => {
+        nav.onclick = (e) => {
+            bg_flag =false;
+            check_bg();
+            flag =false;
+            check_menu(flag);
+            fade_menu.style.animation = `none`;
+            flag = false;
+            if( btn_1.classList.contains('show_1')){
+                btn_1.classList.remove('show_1')
+            }
+            if( btn_2.classList.contains('show_2')){
+                btn_2.classList.remove('show_2')
+            }
+            if( btn_3.classList.contains('show_3')){
+                btn_3.classList.remove('show_3')
+            }
+            console.log(flag)
+        }
+    })
+    
+    // first load
+    let myName = 'NGUYEN TIEP THANG'
+    let show = []
+    let text = '';
+    
+    const show_name = () => {
+        const c = setTimeout(()=>{
+            for(let i = 0;i<myName.length;i++){
+                const time = setTimeout(() => {
+                    let x = myName.charAt(i)
+                    show.push(x)
+                    text += show[i]
+                    home_name.textContent = `${text}`
+                    // console.log(text)
+                },i*130)
+            }
+        },3100)
+       
+      
+        console.log(home_name.nextElementSibling)
+    }
+    show_name();
 }
-show_name();
 /////////////onmousemovie //////////////////////
