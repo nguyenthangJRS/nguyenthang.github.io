@@ -119,6 +119,8 @@ document.addEventListener('mousemove',function(e){
     let y = e.pageY;
     pointer.style.top = `${y}px`;
     pointer.style.left = `${x}px`;
+
+    // pointer.style.transform = `scale(1.3)`;
 })
 window.onload = () => {
    

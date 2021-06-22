@@ -12,7 +12,7 @@ html body {
   overflow-x: hidden;
 }
 
-html body .pointer {
+html body .pointer, html body .pointer_1 {
   position: absolute;
   width: 200px;
   height: 200px;
@@ -25,6 +25,43 @@ html body .pointer {
   pointer-events: none;
   border-radius: 50%;
   mix-blend-mode: difference;
+}
+
+html body .pointer_1 {
+  top: 38%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  opacity: 0;
+  background-color: white;
+  -webkit-animation: poi 1s ease-in 4s forwards;
+          animation: poi 1s ease-in 4s forwards;
+}
+
+@-webkit-keyframes poi {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes poi {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
 }
 
 html body .load {
@@ -239,7 +276,8 @@ html body main #def, html body main #home, html body main #about, html body main
 html body main #home {
   overflow: hidden;
   position: relative;
-  background: #130f40;
+  background: -webkit-gradient(linear, left top, left bottom, from(#030eb0), to(#ffffff));
+  background: linear-gradient(180deg, #030eb0, #ffffff);
   z-index: 1;
 }
 

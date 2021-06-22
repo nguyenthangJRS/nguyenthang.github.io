@@ -26,18 +26,18 @@ particlesJS('home',
       "value": "#dfe6e9"
     },
     "shape": {
-      "type": "circle",
+      "type": "image",
       "stroke": {
-        "width": 1,
+        "width": 100,
         "color": "#dfe6e9"
       },
       "polygon": {
         "nb_sides": 6
       },
       "image": {
-        "src": "./img/nion.png",
-        "width": 50,
-        "height": 50
+        "src": "./img/uni.png",
+        "width": 100,
+        "height": 100
       }
     },
     "opacity": {
@@ -51,7 +51,7 @@ particlesJS('home',
       }
     },
     "size": {
-      "value": 5,
+      "value": 600,
       "value": 4,
       "random": false,
       "anim": {

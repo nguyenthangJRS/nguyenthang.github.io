@@ -60,12 +60,8 @@ html{
     box-sizing: border-box;
     body{
         position: relative;
-        // overflow-x: hidden;
-        // cursor: none;
-        .pointer{
+        .pointer,.pointer_1{
             position: absolute;
-            // top: 50%;
-            // left: 50%;
             width: 200px;
             height: 200px;
             transform: translate(-50%,-50%);
@@ -75,6 +71,19 @@ html{
             pointer-events: none;
             border-radius: 50%;
             mix-blend-mode: difference;
+        }
+        .pointer_1{
+            top: 38%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            opacity: 0;
+            background-color: white;
+            animation: poi 1s ease-in 4s forwards;
+            @keyframes poi {
+                0%{transform: translate(-50%,-50%) scale(0); opacity: 0;}
+                100%{transform: translate(-50%,-50%) scale(1); opacity: 1;}
+            }
         }
        .load{
            position: absolute;
@@ -214,7 +223,13 @@ html{
                 overflow: hidden;
                 @extend #def;
                 position: relative;
-                background: #130f40;
+                background: -webkit-linear-gradient(180deg, #030eb0, #ffffff);
+                background: -moz-linear-gradient(180deg, #030eb0, #ffffff);
+                background: -ms-linear-gradient(180deg, #030eb0, #ffffff);
+                background: -o-linear-gradient(180deg, #030eb0, #ffffff);
+                background: linear-gradient(180deg, #030eb0, #ffffff);
+                
+                
                 z-index: 1;
                 .home_name{
                     position: absolute;
