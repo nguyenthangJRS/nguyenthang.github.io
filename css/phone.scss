@@ -172,9 +172,6 @@
                     @include flex(center);
                     width: 100%;
                     .home_name{
-                        position: absolute;
-                        top: 43%;
-                        left: 23%;
                         z-index: 3;
                         padding: 15px;
                         .name{
@@ -184,8 +181,6 @@
                     }
                     .home_1{
                         position: absolute;
-                        top: 66%;
-                        left: 26%;
                         width: 290px;
                         height: 60px;
                         z-index: 3;
@@ -397,12 +392,12 @@
                                     margin-top: 40px;
                                     // opacity: 0; 
                                     img{
-                                        width: 226px;
+                                        width: 62%;
                                         height: 154px;
                                        
                                     }
                                     .items_content{
-                                        min-width: 75%;
+                                        min-width: 68%;
                                         p{
                                             color: black;
                                             font-size: 12px;

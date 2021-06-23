@@ -46,9 +46,6 @@
     text-align: center;
   }
   html body main #home .home_name {
-    top: 40%;
-    left: 24%;
-    z-index: 3;
     padding: 15px;
   }
   html body main #home .home_name .name {
@@ -56,7 +53,6 @@
   }
   html body main #home .home_1 {
     position: absolute;
-    left: 12%;
     height: 60px;
     z-index: 3;
   }

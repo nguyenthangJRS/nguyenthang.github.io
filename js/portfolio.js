@@ -1,38 +1,29 @@
-window.addEventListener('DOMContentLoaded',() =>{
-
-},false)
 const menu = document.querySelectorAll('.menu_link');
 const tag_li = document.querySelectorAll('.menu_items');
 const setMenu = document.querySelectorAll('.menu_items a');
 const fate = document.querySelectorAll('.fate');
 const fade_menu = document.querySelector('.menu');
-const load = document.querySelector('.load');
 const section = document.querySelector('.section');
 const menu_btn = document.querySelector('.menu_btn .btn');
 /////animation
-const list_about = document.querySelectorAll('.detail_items');
-const about = document.querySelector('.about_title');
-const about_img = document.querySelector('.about_image');
-const personal = document.querySelector('.about_wrap p');
+const about = document.querySelector('.about_title p');
 const edu = document.querySelector('.work_title');
-const edu_item = document.querySelectorAll('.edu_items');
 const edu_title = document.querySelector('.work_title p');
-const edu_img = document.querySelector('.edu_image');
+const port_img = document.querySelector('.port_img');
+const port_title = document.querySelector('.port_title');
+const title_name = document.querySelector('.title_name');
 const skill_title = document.querySelector('.skill_title');
-const skill_img = document.querySelector('.skill_img');
 const hyaku = document.querySelector('.hyaku');
 const skill_pacent = document.querySelectorAll('.skill_pacent span');
 const skill_items = document.querySelectorAll('.skill_items p');
-const title_name = document.querySelector('.title_name');
-const port_img = document.querySelector('.port_img');
-const port_title = document.querySelector('.port_title');
-const port_items = document.querySelectorAll('.port_items');
 const contact = document.querySelector('#contact .span');
 const span_1 = document.querySelector('#contact .span .span_1');
 const span_2 = document.querySelector('#contact .span .span_2');
+
 const local_adress = document.querySelector('#contact .local_adress');
 const local_contact = document.querySelector('#contact .local_contact');
 const about_title_phone = document.querySelector('.about_title_phone');
+const about_img = document.querySelector('.about_image');
 const edu_title_phone = document.querySelector('.edu_title_phone');
 const skill_title_phone = document.querySelector('.skill_title_phone');
 /////////////// home
@@ -45,44 +36,28 @@ const pointer = document.querySelector('.pointer');
 const bubble_1 = document.querySelector('.bubble_1');
 const bubble_2 = document.querySelector('.bubble_2');
 
+const imgApear = document.querySelectorAll(".apearen");
+const sectionEle = document.querySelectorAll('section');
+const home = document.querySelector('a[href="#home"]');
+const about_1 = document.querySelector('a[href="#about"]');
+const education = document.querySelector('a[href="#education"]');
+const skill = document.querySelector('a[href="#skill"]');
+const portfolio = document.querySelector('a[href="#portfolio"]');
+const contact_1 = document.querySelector('a[href="#contact"]');
 
-let  bg_flag = false;
-const check_bg = () => {
-    bg_menu.style.animation = bg_flag ? `show_bg_menu 0.5s ease-in-out forwards` : 'hide_bg_menu 0.5s ease-in-out forwards';
-}
-bg_menu.onclick = () => {
-    bg_flag = false;
-    check_bg();
-    flag =false;
-    check_menu(flag);
-    console.log(flag)
 
-}
-// console.log(name_String)
-const resize_about = (personal,about,about_img,list_about) => {
-    about.style.animation = `show_about_img 0.8s ease-in-out 0.5s forwards`;
-    personal.style.animation = `show_title 1.4s ease-in-out 0.6s forwards`;
-    about_img.style.animation = `personal 0.7s ease-in-out 0.6s forwards`;
-    for(let i = 0;i<list_about.length;i++){
-        let scroll = window.innerWidth
-        if(scroll>570+i*25){
-            list_about[i].style.animation = `list_about 1s ease-in-out ${0.25*i}s forwards`;
-        }
+sectionEle.forEach(ele => {
+    ele.onmouseenter = (e) =>{
+        let id_name = e.target.id;
+        home.style.background = id_name === 'home' ? `#70a1ff` : '#f1f2f6';
+        about_1.style.background = id_name === 'about' ? `#70a1ff` : '#f1f2f6';
+        education.style.background = id_name === 'education' ? `#70a1ff` : '#f1f2f6';
+        skill.style.background = id_name === 'skill' ? `#70a1ff` : '#f1f2f6';
+        portfolio.style.background = id_name === 'portfolio' ? `#70a1ff` : '#f1f2f6';
+        contact_1.style.background = id_name === 'contact' ? `#70a1ff` : '#f1f2f6';
     }
+})
 
-}
-const resize_edu = (edu_title,edu,edu_img,edu_item) => {
-    edu.style.animation = ` edu_bg 1s ease-in-out 0.5s forwards`;
-    edu_title.style.animation = `show_title_edu 1.4s ease-in-out 0.6s forwards`;
-    edu_img.style.animation = `work_img 0.8s ease-in-out 1.4s forwards`;
-    for(let i = 0;i<edu_item.length;i++){
-    edu_item[i].style.animation = `list_about 1s ease-in-out ${0.25*i}s forwards`;
-}
-}
-const resize_skill_1 = (skill_img,skill_title) => {
-    skill_title.style.animation = `skill_title 1.2s ease-in-out 0.4s forwards`;
-    skill_img.style.animation = ` skill_img 1s ease-in-out 0.5s forwards`;
-}
 const resize_skill_2 = (skill_items,skill_pacent,hyaku) => {
     skill_pacent.forEach(item =>{
         item.style.animation = `skill_show 1.4s ease-in-out 0.5s forwards`;
@@ -92,18 +67,10 @@ const resize_skill_2 = (skill_items,skill_pacent,hyaku) => {
     })
     hyaku.style.animation  = `skill_title 0.8s ease-in-out 2s forwards`;
 } 
-const resize_pofolio = (title_name,port_img,port_title,port_items,show_port) => {
-    title_name.style.animation = ` ${show_port} 2s ease-in-out 2s forwards`;
-    port_img.style.animation = `port_img 1.3s ease-in-out 0.3s forwards`;
-    port_title.style.animation = `port_title 1.3s ease-in-out 0.5s forwards`;
-    for(let i = 0;i<port_items.length;i++){
-        port_items[i].style.animation = `work_img 1.3s ease-in-out ${0.4*i}s forwards`;
-}
-}
 const resize_contact = (contact,span_1,span_2,local_adress,local_contact) => {
-    contact.style.animation = `span_title 1s ease-in-out 0.5s forwards`;
-    span_1.style.animation = `span_title_1 0.7s ease-in-out 1.5s forwards`;
-    span_2.style.animation = `span_title_2 0.7s ease-in-out 2.2s forwards`;
+    contact.style.animation = `span_title 1s ease-in-out forwards`;
+    span_1.style.animation = `span_title_1 0.7s ease-in-out 1s forwards`;
+    span_2.style.animation = `span_title_2 0.7s ease-in-out 1.7s forwards`;
     local_adress.style.animation = ` local_adress 1.2s ease-in-out 1s forwards`;
     local_contact.style.animation = `local_contact 1.2s ease-in-out 1s forwards`;
 }
@@ -112,108 +79,21 @@ const resize_contact_0 = (contact,span_1,span_2) => {
     span_1.style.animation = `none`;
     span_2.style.animation = `none`;
 }
-
-
+// add mouse movie
 document.addEventListener('mousemove',function(e){
     let x = e.pageX;
     let y = e.pageY;
     pointer.style.top = `${y}px`;
     pointer.style.left = `${x}px`;
-
-    // pointer.style.transform = `scale(1.3)`;
 })
-window.onload = () => {
-   
 
-    if(window.screen.width>=1500){
-        menu.forEach(item => {
-                item.onmouseenter = (event)=>{
-                    const items_menu = event.target;
-                    const span_menu = items_menu.parentNode.querySelector('span')
-                    span_menu.style.transform = `translateY(${0})`
-                    span_menu.style.opacity = 1
-                }
-                item.onmouseleave = (e)=>{
-                    const items_menu = e.target;
-                    const span_menu = items_menu.parentNode.querySelector('span')
-                    span_menu.style.transform = `translateY(${-10}px)`
-                    span_menu.style.opacity = 0
-                }
-            })
-        window.onscroll = () =>{
-            let scroll = window.scrollY;
-            console.log(scroll)
-/////////////////////// about 
-            if(scroll > 650){
-                bubble_1.style.animation = `list_about 1s ease-in-out forwards`;
-                bubble_2.style.animation = `local_adress 1s ease-in-out forwards`;
-            }   
-///////////////////////////////////     
-            if(scroll<500){
-                personal.style.animation = `none`;  
-            }
-            else{
-                resize_about(personal,about,about_img,list_about);
-            }
-            // edu /////////////////////////////////
-            if(scroll<1500){
-                edu_title.style.animation = `none`;
-            }
-            else{
-                resize_edu(edu_title,edu,edu_img,edu_item);
-            }
-            // skill//////////////////////////////////////
-            if(scroll<2350){
-                skill_img.style.animation = `none`;
-            }
-           else{
-                resize_skill_1(skill_img,skill_title);
-            }
-            if(scroll>2700){
-                resize_skill_2(skill_items,skill_pacent,hyaku);
-            }
-            //////////////// portfolio
-            if(scroll<3350){
-                title_name.style.animation = `none`;
-            }
-            else{
-                resize_pofolio(title_name,port_img,port_title,port_items,'show_port');
-            }
-            // contact //////////
-            if(scroll< 4450){
-                resize_contact_0(contact,span_1,span_2)
-            }else{
-                resize_contact(contact,span_1,span_2,local_adress,local_contact);
-            }
-            /////// menu color change/////////////////////////////////////////////////
-            tag_li.forEach(item => {
-                const tag_icon = item.querySelector('a')
-                if(tag_icon.classList.contains('add')){
-                    tag_icon.classList.remove('add');
-                }
-                if(scroll < 581){
-                    item.classList.contains('item_1') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-                }
-                if(scroll >= 581){
-                    item.classList.contains('item_2') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-                }
-                if(scroll > 1550){
-                    item.classList.contains('item_3') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-                }
-                if(scroll > 2519){
-                    item.classList.contains('item_4') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-                }
-                if(scroll > 3488){
-                    item.classList.contains('item_5') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-                }
-                if(scroll > 4651){
-                    item.classList.contains('item_6') ?  tag_icon.classList.add('add'):tag_icon.classList.remove('add');;
-                }
-            })
-        }
+window.onload = () => {
+    let flag = false;
+    let  bg_flag = false;
+    const check_bg = () => {
+        bg_menu.style.animation = bg_flag ? `show_bg_menu 0.5s ease-in-out forwards` : 'hide_bg_menu 0.5s ease-in-out forwards';
     }
     //////////////////////////////////// menu btn
-    let flag = false;
     const check_menu = (flag) => {
         if(flag){
             btn_1.classList.add('show_1')
@@ -239,7 +119,6 @@ window.onload = () => {
         bg_flag = !bg_flag;
         check_bg();
         check_menu(flag);
-        
     }
     menu.forEach(nav => {
         nav.onclick = (e) => {
@@ -258,10 +137,180 @@ window.onload = () => {
             if( btn_3.classList.contains('show_3')){
                 btn_3.classList.remove('show_3')
             }
-            console.log(flag)
         }
     })
-    
+    bg_menu.onclick = () => {
+        bg_flag = false;
+        check_bg();
+        flag =false;
+        check_menu(flag);
+    }
+
+    let option ={
+        threshold:1,
+        rootMargin: "0px 0px -25px 0px"
+    }
+    // intersection
+    const observer= new IntersectionObserver(function(entries,observer){
+        entries.forEach(entry=>{
+            if(!entry.isIntersecting){
+                return;
+            }else{
+                entry.target.classList.toggle("apear");
+                observer.unobserve(entry.target);
+            }
+        })
+    },option);
+    imgApear.forEach(fate =>{
+        observer.observe(fate);
+    })
+  // intersection
+    menu.forEach(item => {
+        item.onmouseenter = (event)=>{
+            const items_menu = event.target;
+            const span_menu = items_menu.parentNode.querySelector('span')
+            span_menu.style.transform = `translateY(${0})`
+            span_menu.style.opacity = 1
+        }
+        item.onmouseleave = (e)=>{
+            const items_menu = e.target;
+            const span_menu = items_menu.parentNode.querySelector('span')
+            span_menu.style.transform = `translateY(${-10}px)`
+            span_menu.style.opacity = 0
+        }
+    })
+
+    // computer
+    if(window.innerWidth>=1500){
+        window.onscroll = () =>{
+            let scroll = window.scrollY;
+            // console.log(scroll)
+            //////////// about 
+            about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            // skill 
+            edu.style.animation = scroll < 1550 ? 'none' : `edu_bg 1s ease-in-out 0.5s forwards`;
+            edu_title.style.animation = scroll < 1550 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
+            skill_title.style.animation = scroll < 2450 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            if(scroll>2700){
+                resize_skill_2(skill_items,skill_pacent,hyaku);
+            }
+            // portfolio/
+            port_img.style.animation = scroll < 3340 ? 'none' : `port_img 1.3s ease-in-out 0.3s forwards`;
+            title_name.style.animation = scroll < 3700 ? 'none' : `show_port 1s ease-in-out forwards`;
+            port_title.style.animation = scroll < 3050 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
+            // contact 
+            if(scroll< 4450){
+                resize_contact_0(contact,span_1,span_2)
+            }else{
+                resize_contact(contact,span_1,span_2,local_adress,local_contact);
+            }
+        }
+    }
+    //ipad
+    if(window.innerWidth >=1024 && window.innerWidth <1500){
+        window.onscroll = () =>{
+            let scroll = window.scrollY;
+            // console.log(scroll)
+            //////////// about 
+            about.style.animation = scroll < 581 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            // edu 
+            edu.style.animation = scroll < 1357 ? 'none' : `edu_bg 1s ease-in-out 0.5s forwards`;
+            edu_title.style.animation = scroll < 1357 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
+            // skill 
+            skill_title.style.animation = scroll < 2150 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            if(scroll>2200){
+                resize_skill_2(skill_items,skill_pacent,hyaku);
+            }
+            // portfolio/
+            title_name.style.animation = scroll < 3100 ? 'none' : `show_port  1s ease-in-out forwards`;
+            port_title.style.animation = scroll < 3050 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
+            // contact 
+            if(scroll< 3714){
+                resize_contact_0(contact,span_1,span_2)
+            }else{
+                resize_contact(contact,span_1,span_2,local_adress,local_contact);
+            }
+        }
+    }
+    //ipad mini
+    if(window.innerWidth >=750 && window.innerWidth <=1023){
+        window.onscroll = () =>{
+            let scroll = window.scrollY;
+            // console.log(scroll)
+            /// about 
+            about.style.animation = scroll < 170 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            // edu 
+            edu.style.animation = scroll < 1300 ? 'none' : `edu_bg 1s ease-in-out 0.5s forwards`;
+            edu_title.style.animation = scroll < 1300 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
+            // skill 
+            skill_title.style.animation = scroll < 2150 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            if(scroll>2200){
+                resize_skill_2(skill_items,skill_pacent,hyaku);
+            }
+            // portfolio/
+            title_name.style.animation = scroll <2683 ? `none`:` span_title_1 2s ease-in-out forwards`;
+            // contact //////////
+            if(scroll< 3970){
+                resize_contact_0(contact,span_1,span_2)
+               
+            }else{
+                resize_contact(contact,span_1,span_2,local_adress,local_contact);
+            }
+        }
+    }
+    ////////// phone //////////////////////////////////////////
+    if(window.innerWidth >=410 && window.innerWidth <=749){
+        window.onscroll = () =>{
+            let scroll = window.scrollY;
+            // console.log(scroll)
+
+            //////////// about 
+            about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+            about_img.style.animation =  scroll < 297 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
+            // edu
+            edu_title_phone.style.animation =  scroll < 1250 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+            // skill 
+            skill_title_phone.style.animation = scroll < 1830 ? `none` : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            if(scroll>2138){
+                resize_skill_2(skill_items,skill_pacent,hyaku);
+            }
+            // portfolio/
+            title_name.style.animation = scroll <2683 ? `none`:` span_title_1 2s ease-in-out  forwards`;
+            // contact //
+            contact.style.animation = scroll < 3702 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
+            span_1.style.animation = scroll < 3702 ? `none` : `span_title_1 0.7s ease-in-out 1.5s forwards`;
+            span_2.style.animation = scroll < 3702 ? `none` : `span_title_2 0.7s ease-in-out 2.2s forwards`;
+            local_adress.style.animation = scroll < 3859 ? `none` : `local_adress 1s ease-in-out 0.5s forwards`;
+            local_contact.style.animation = scroll < 4100 ? `none` : `local_contact 1s ease-in-out 0.5s forwards`;
+        }
+    }
+    ////////////////// small phone //////////////////////////////////////////
+    if(window.innerWidth <410){
+        window.onscroll = () =>{
+            let scroll = window.scrollY;
+            console.log(scroll)
+
+    //////////// about 
+            about_title_phone.style.animation =  scroll < 150 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+            about_img.style.animation =  scroll < 350 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
+            // edu
+            edu_title_phone.style.animation =  scroll < 900 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
+            // skill 
+            skill_title_phone.style.animation = scroll < 1590 ? `none` : `skill_title 1s ease-in-out 0.3s forwards`;
+            if(scroll>2138){
+                resize_skill_2(skill_items,skill_pacent,hyaku);
+            }
+            // portfolio/
+            title_name.style.animation = scroll <2500 ? `none`:` span_title_1 2s ease-in-out  forwards`;
+            // contact //////////
+            contact.style.animation = scroll < 3530 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
+            span_1.style.animation = scroll < 3530 ? `none` : `span_title_1 0.7s ease-in-out 0.8s forwards`;
+            span_2.style.animation = scroll < 3530 ? `none` : `span_title_2 0.7s ease-in-out 1.5s forwards`;
+            local_adress.style.animation = scroll < 3700 ? `none` : `local_adress 1s ease-in-out 1s forwards`;
+            local_contact.style.animation = scroll < 3920 ? `none` : `local_adress 1s ease-in-out 1s forwards`;
+        }
+    }
+
     // first load
     let myName = 'NGUYEN TIEP THANG'
     let show = []
@@ -275,7 +324,6 @@ window.onload = () => {
                     show.push(x)
                     text += show[i]
                     home_name.textContent = `${text}`
-                    // console.log(text)
                 },i*130)
             }
         },3100)

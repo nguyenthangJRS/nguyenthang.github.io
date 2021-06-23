@@ -174,9 +174,6 @@
     width: 100%;
   }
   html body main #home .home_name {
-    position: absolute;
-    top: 40%;
-    left: 11%;
     z-index: 3;
     padding: 15px;
   }
@@ -185,8 +182,6 @@
   }
   html body main #home .home_1 {
     position: absolute;
-    top: 66%;
-    left: 11%;
     width: 290px;
     height: 60px;
     z-index: 3;

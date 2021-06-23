@@ -168,9 +168,6 @@
     width: 100%;
   }
   html body main #home .home_name {
-    position: absolute;
-    top: 43%;
-    left: 23%;
     z-index: 3;
     padding: 15px;
   }
@@ -179,8 +176,6 @@
   }
   html body main #home .home_1 {
     position: absolute;
-    top: 66%;
-    left: 26%;
     width: 290px;
     height: 60px;
     z-index: 3;
@@ -471,11 +466,11 @@
     margin-top: 40px;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items img {
-    width: 226px;
+    width: 62%;
     height: 154px;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content {
-    min-width: 75%;
+    min-width: 68%;
   }
   html body main #portfolio .port_wrap .content .port_list .port_items .items_content p {
     color: black;
