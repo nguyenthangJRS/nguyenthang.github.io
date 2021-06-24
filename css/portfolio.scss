@@ -851,26 +851,7 @@ html{
         }
     }
 }
-    // show-hide-icon
-    @keyframes hide_icon {
-        0%{
-            transform: translateX(20px);
-        }
-       
-        100%{
-            transform: translateX(0);
-        }
-    }
-    @keyframes card {
-        0%{
-            opacity: 0;
-            transform: translateX(-50px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
+
     // about 
 
 @keyframes show_title {
@@ -891,35 +872,7 @@ html{
         transform: scale(1) rotate(90deg) translateX(0);
     }
 }
-@keyframes personal {
-    0%{
-        transform: translateX(100px);
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes list_about {
-    0%{
-        transform: translateY(150px);
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 // education /////////////////@include
-@keyframes edu_bg {
-    0%{
-        transform: translateY(100px);
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 @keyframes show_title_edu {
     0%{
         opacity: 0;
@@ -952,18 +905,6 @@ html{
 @keyframes skill_title {
     0%{
         transform: translateX(100px);
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes skill_img {
-    0%{
-        transform: translateX(100px);
-    }
-    50%{
-        transform: translateX(-50px);
     }
     100%{
         transform: translateX(0);
@@ -1055,28 +996,6 @@ html{
     }
     50%{
         transform: translateX(40%);
-        opacity: 1;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes local_adress {
-    0%{
-        transform: translateX(-200px);
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes local_contact {
-    0%{
-        transform: translateX(200px);
-    }
-    50%{
-        transform: translateX(-20px);
         opacity: 1;
     }
     100%{

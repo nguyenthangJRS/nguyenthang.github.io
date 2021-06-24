@@ -1662,54 +1662,6 @@ html body footer .footer_contact .ft_list .ft_link img {
   height: 30px;
 }
 
-@-webkit-keyframes hide_icon {
-  0% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes hide_icon {
-  0% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes card {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes card {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
 @-webkit-keyframes show_title {
   0% {
     opacity: 0;
@@ -1753,78 +1705,6 @@ html body footer .footer_contact .ft_list .ft_link img {
     opacity: 1;
     -webkit-transform: scale(1) rotate(90deg) translateX(0);
             transform: scale(1) rotate(90deg) translateX(0);
-  }
-}
-
-@-webkit-keyframes personal {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes personal {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes list_about {
-  0% {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes list_about {
-  0% {
-    -webkit-transform: translateY(150px);
-            transform: translateY(150px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes edu_bg {
-  0% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes edu_bg {
-  0% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -1916,38 +1796,6 @@ html body footer .footer_contact .ft_list .ft_link img {
   0% {
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes skill_img {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-  50% {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes skill_img {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-  50% {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -2171,64 +2019,6 @@ html body footer .footer_contact .ft_list .ft_link img {
   50% {
     -webkit-transform: translateX(40%);
             transform: translateX(40%);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes local_adress {
-  0% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes local_adress {
-  0% {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes local_contact {
-  0% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
-  }
-  50% {
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes local_contact {
-  0% {
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
-  }
-  50% {
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
     opacity: 1;
   }
   100% {

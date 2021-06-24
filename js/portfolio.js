@@ -1,9 +1,5 @@
 const menu = document.querySelectorAll('.menu_link');
-const tag_li = document.querySelectorAll('.menu_items');
-const setMenu = document.querySelectorAll('.menu_items a');
-const fate = document.querySelectorAll('.fate');
 const fade_menu = document.querySelector('.menu');
-const section = document.querySelector('.section');
 const menu_btn = document.querySelector('.menu_btn .btn');
 /////animation
 const about = document.querySelector('.about_title p');
@@ -37,7 +33,6 @@ const bubble_1 = document.querySelector('.bubble_1');
 const bubble_2 = document.querySelector('.bubble_2');
 
 const imgApear = document.querySelectorAll(".apearen");
-const sectionEle = document.querySelectorAll('section');
 const home = document.querySelector('a[href="#home"]');
 const about_1 = document.querySelector('a[href="#about"]');
 const education = document.querySelector('a[href="#education"]');
@@ -45,18 +40,6 @@ const skill = document.querySelector('a[href="#skill"]');
 const portfolio = document.querySelector('a[href="#portfolio"]');
 const contact_1 = document.querySelector('a[href="#contact"]');
 
-
-sectionEle.forEach(ele => {
-    ele.onmouseenter = (e) =>{
-        let id_name = e.target.id;
-        home.style.background = id_name === 'home' ? `#70a1ff` : '#f1f2f6';
-        about_1.style.background = id_name === 'about' ? `#70a1ff` : '#f1f2f6';
-        education.style.background = id_name === 'education' ? `#70a1ff` : '#f1f2f6';
-        skill.style.background = id_name === 'skill' ? `#70a1ff` : '#f1f2f6';
-        portfolio.style.background = id_name === 'portfolio' ? `#70a1ff` : '#f1f2f6';
-        contact_1.style.background = id_name === 'contact' ? `#70a1ff` : '#f1f2f6';
-    }
-})
 
 const resize_skill_2 = (skill_items,skill_pacent,hyaku) => {
     skill_pacent.forEach(item =>{
@@ -71,8 +54,8 @@ const resize_contact = (contact,span_1,span_2,local_adress,local_contact) => {
     contact.style.animation = `span_title 1s ease-in-out forwards`;
     span_1.style.animation = `span_title_1 0.7s ease-in-out 1s forwards`;
     span_2.style.animation = `span_title_2 0.7s ease-in-out 1.7s forwards`;
-    local_adress.style.animation = ` local_adress 1.2s ease-in-out 1s forwards`;
-    local_contact.style.animation = `local_contact 1.2s ease-in-out 1s forwards`;
+    local_adress.style.animation = ` port_img 1.2s ease-in-out 1s forwards`;
+    local_contact.style.animation = `port_title 1.2s ease-in-out 1s forwards`;
 }
 const resize_contact_0 = (contact,span_1,span_2) => {
     contact.style.animation = `none`;
@@ -146,25 +129,26 @@ window.onload = () => {
         check_menu(flag);
     }
 
+    // intersection
     let option ={
         threshold:1,
         rootMargin: "0px 0px -25px 0px"
     }
-    // intersection
     const observer= new IntersectionObserver(function(entries,observer){
         entries.forEach(entry=>{
             if(!entry.isIntersecting){
                 return;
             }else{
-                entry.target.classList.toggle("apear");
-                observer.unobserve(entry.target);
-            }
+                    entry.target.classList.toggle("apear");
+                    observer.unobserve(entry.target);
+                }
+            })
+        },option);
+        imgApear.forEach(fate =>{
+            observer.observe(fate);
         })
-    },option);
-    imgApear.forEach(fate =>{
-        observer.observe(fate);
-    })
-  // intersection
+    // intersection
+
     menu.forEach(item => {
         item.onmouseenter = (event)=>{
             const items_menu = event.target;
@@ -180,15 +164,25 @@ window.onload = () => {
         }
     })
 
+    const change_bg = (scroll,a,b,c,d,e) => {
+        home.style.background = scroll < a ? `#70a1ff` : '#f1f2f6';
+        about_1.style.background = scroll > a && scroll <= b ? `#70a1ff` : '#f1f2f6';
+        education.style.background = scroll > b && scroll <= c ? `#70a1ff` : '#f1f2f6';
+        skill.style.background = scroll > c && scroll <= d ? `#70a1ff` : '#f1f2f6';
+        portfolio.style.background = scroll > d && scroll <= e ? `#70a1ff` : '#f1f2f6';
+        contact_1.style.background = scroll > e ? `#70a1ff` : '#f1f2f6';
+    }
+
     // computer
     if(window.innerWidth>=1500){
-        window.onscroll = () =>{
+        window.onscroll = (e) =>{
             let scroll = window.scrollY;
-            // console.log(scroll)
+            //    console.log(scroll);
+               change_bg(scroll,567,1536,2500,3474,4636);
             //////////// about 
             about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // skill 
-            edu.style.animation = scroll < 1550 ? 'none' : `edu_bg 1s ease-in-out 0.5s forwards`;
+            edu.style.animation = scroll < 1550 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
             edu_title.style.animation = scroll < 1550 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
             skill_title.style.animation = scroll < 2450 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
             if(scroll>2700){
@@ -211,10 +205,11 @@ window.onload = () => {
         window.onscroll = () =>{
             let scroll = window.scrollY;
             // console.log(scroll)
+            change_bg(scroll,650,1500,2140,3200,4264);
             //////////// about 
             about.style.animation = scroll < 581 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // edu 
-            edu.style.animation = scroll < 1357 ? 'none' : `edu_bg 1s ease-in-out 0.5s forwards`;
+            edu.style.animation = scroll < 1357 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
             edu_title.style.animation = scroll < 1357 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
             // skill 
             skill_title.style.animation = scroll < 2150 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
@@ -237,10 +232,11 @@ window.onload = () => {
         window.onscroll = () =>{
             let scroll = window.scrollY;
             // console.log(scroll)
+            change_bg(scroll,650,1500,2140,3200,4264);
             /// about 
             about.style.animation = scroll < 170 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // edu 
-            edu.style.animation = scroll < 1300 ? 'none' : `edu_bg 1s ease-in-out 0.5s forwards`;
+            edu.style.animation = scroll < 1300 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
             edu_title.style.animation = scroll < 1300 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
             // skill 
             skill_title.style.animation = scroll < 2150 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
@@ -263,10 +259,10 @@ window.onload = () => {
         window.onscroll = () =>{
             let scroll = window.scrollY;
             // console.log(scroll)
-
+            change_bg(scroll,388,1650,2240,3200,4263);
             //////////// about 
             about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
-            about_img.style.animation =  scroll < 297 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
+            about_img.style.animation =  scroll < 297 ? `none` : `skill_title 1s ease-in-out 0.6s forwards`;
             // edu
             edu_title_phone.style.animation =  scroll < 1250 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
             // skill 
@@ -280,19 +276,20 @@ window.onload = () => {
             contact.style.animation = scroll < 3702 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
             span_1.style.animation = scroll < 3702 ? `none` : `span_title_1 0.7s ease-in-out 1.5s forwards`;
             span_2.style.animation = scroll < 3702 ? `none` : `span_title_2 0.7s ease-in-out 2.2s forwards`;
-            local_adress.style.animation = scroll < 3859 ? `none` : `local_adress 1s ease-in-out 0.5s forwards`;
-            local_contact.style.animation = scroll < 4100 ? `none` : `local_contact 1s ease-in-out 0.5s forwards`;
+            local_adress.style.animation = scroll < 3859 ? `none` : `port_img 1s ease-in-out 0.5s forwards`;
+            local_contact.style.animation = scroll < 4100 ? `none` : `port_title 1s ease-in-out 0.5s forwards`;
         }
     }
     ////////////////// small phone //////////////////////////////////////////
     if(window.innerWidth <410){
         window.onscroll = () =>{
             let scroll = window.scrollY;
-            console.log(scroll)
+            // console.log(scroll)
+            change_bg(scroll,370,1387,2314,3260,4180);
 
     //////////// about 
             about_title_phone.style.animation =  scroll < 150 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
-            about_img.style.animation =  scroll < 350 ? `none` : `personal 1s ease-in-out 0.6s forwards`;
+            about_img.style.animation =  scroll < 350 ? `none` : `skill_title 1s ease-in-out 0.6s forwards`;
             // edu
             edu_title_phone.style.animation =  scroll < 900 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
             // skill 
@@ -306,11 +303,10 @@ window.onload = () => {
             contact.style.animation = scroll < 3530 ? `none` : `span_title 1s ease-in-out 0.5s forwards`;
             span_1.style.animation = scroll < 3530 ? `none` : `span_title_1 0.7s ease-in-out 0.8s forwards`;
             span_2.style.animation = scroll < 3530 ? `none` : `span_title_2 0.7s ease-in-out 1.5s forwards`;
-            local_adress.style.animation = scroll < 3700 ? `none` : `local_adress 1s ease-in-out 1s forwards`;
-            local_contact.style.animation = scroll < 3920 ? `none` : `local_adress 1s ease-in-out 1s forwards`;
+            local_adress.style.animation = scroll < 3700 ? `none` : `port_img 1s ease-in-out 1s forwards`;
+            local_contact.style.animation = scroll < 3920 ? `none` : `port_img 1s ease-in-out 1s forwards`;
         }
     }
-
     // first load
     let myName = 'NGUYEN TIEP THANG'
     let show = []
