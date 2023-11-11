@@ -206,7 +206,7 @@ window.onload = () => {
         window.onscroll = () =>{
             let scroll = window.scrollY;
              console.log(scroll)
-            change_bg(scroll,650,1100,1940,2500,3064);
+            change_bg(scroll,500,1000,1600,2100,3364);
             //////////// about 
             about.style.animation = scroll < 400 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // edu 
