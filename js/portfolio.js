@@ -260,7 +260,9 @@ window.onload = () => {
     if(window.innerWidth >=410 && window.innerWidth <=749){
         window.onscroll = () =>{
             let scroll = window.scrollY;
-            // console.log(scroll)
+
+            console.log(4);
+             console.log(scroll)
             change_bg(scroll,388,1650,2240,3200,4263);
             //////////// about 
             about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
@@ -325,9 +327,7 @@ window.onload = () => {
                 },i*130)
             }
         },3100)
-       
-      
-        console.log(home_name.nextElementSibling)
+
     }
     show_name();
 }
