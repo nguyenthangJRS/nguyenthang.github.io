@@ -1022,7 +1022,7 @@ html body main #skill .skill_wrap .skill_content .skill_list .skill_items .skill
 }
 
 html body main #skill .skill_wrap .skill_content .skill_list .skill_items .skill_pacent .span-7 {
-  width: 45%;
+  width: 75%;
   position: absolute;
   top: 0;
   left: 0;
@@ -1046,7 +1046,7 @@ html body main #skill .skill_wrap .skill_content .skill_list .skill_items .skill
 }
 
 html body main #skill .skill_wrap .skill_content .skill_list .skill_items .skill_pacent .span-8 {
-  width: 40%;
+  width: 80%;
   position: absolute;
   top: 0;
   left: 0;
