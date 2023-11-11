@@ -181,11 +181,11 @@ window.onload = () => {
                console.log(scroll);
                change_bg(scroll,500,1000,2300,2300,3364);
             //////////// about 
-            about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            about.style.animation = scroll > 500 && scroll <=1500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // skill 
             edu.style.animation = scroll < 1550 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
             edu_title.style.animation = scroll < 1550 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
-            skill_title.style.animation = scroll < 2100 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            skill_title.style.animation = scroll < 2100 && scroll <=3000 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
             if(scroll>2200){
                 resize_skill_2(skill_items,skill_pacent,hyaku);
             }
