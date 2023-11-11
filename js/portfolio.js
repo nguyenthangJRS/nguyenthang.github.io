@@ -177,9 +177,9 @@ window.onload = () => {
     if(window.innerWidth>=1500){
         window.onscroll = (e) =>{
             let scroll = window.scrollY;
-            console.log(1);
+            console.log("thang");
                console.log(scroll);
-               change_bg(scroll,500,1000,1900,2300,3364);
+               change_bg(scroll,500,1000,2300,2300,3364);
             //////////// about 
             about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // skill 
