@@ -70,6 +70,7 @@ document.addEventListener('mousemove',function(e){
     pointer.style.left = `${x}px`;
 })
 
+
 window.onload = () => {
     let flag = false;
     let  bg_flag = false;
@@ -174,7 +175,34 @@ window.onload = () => {
     }
 
     // computer
-    if(window.innerWidth>=1500){
+    if(window.innerWidth>=1800){
+        window.onscroll = (e) =>{
+            let scroll = window.scrollY;
+               console.log(window.innerWidth);
+               change_bg(scroll,567,1536,2500,3474,4636);
+            //////////// about 
+            about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            // skill 
+            edu.style.animation = scroll < 1550 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
+            edu_title.style.animation = scroll < 1550 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
+            skill_title.style.animation = scroll < 2450 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            if(scroll>2700){
+                resize_skill_2(skill_items,skill_pacent,hyaku);
+            }
+            // portfolio/
+            port_img.style.animation = scroll < 3340 ? 'none' : `port_img 1.3s ease-in-out 0.3s forwards`;
+            title_name.style.animation = scroll < 3700 ? 'none' : `show_port 1s ease-in-out forwards`;
+            port_title.style.animation = scroll < 3050 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
+            // contact 
+            if(scroll< 4450){
+                resize_contact_0(contact,span_1,span_2)
+            }else{
+                resize_contact(contact,span_1,span_2,local_adress,local_contact);
+            }
+        }
+    }
+    // computer
+    if(window.innerWidth >=1500 && window.innerWidth <1800){
         window.onscroll = (e) =>{
             let scroll = window.scrollY;
             console.log(`1 : ${window.innerWidth}`);
@@ -205,23 +233,24 @@ window.onload = () => {
     if(window.innerWidth >=1024 && window.innerWidth <1500){
         window.onscroll = () =>{
             let scroll = window.scrollY;
-             console.log(scroll)
-            change_bg(scroll,500,1000,1600,2100,3364);
+            //  console.log(scroll)
+            console.log(`2 : ${window.innerWidth}`);
+            change_bg(scroll,650,1500,2140,3200,4264);
             //////////// about 
-            about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
-            // edu 
-            edu.style.animation = scroll < 1000 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
-            edu_title.style.animation = scroll < 1000 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
+            about.style.animation = scroll < 581 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            // // edu 
+            // edu.style.animation = scroll < 1357 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
+            edu_title.style.animation = scroll < 1357 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
             // skill 
-            skill_title.style.animation = scroll < 1600 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
-            if(scroll>1800){
+            skill_title.style.animation = scroll < 2150 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            if(scroll>2200){
                 resize_skill_2(skill_items,skill_pacent,hyaku);
             }
             // portfolio/
-            title_name.style.animation = scroll < 2100 ? 'none' : `show_port  1s ease-in-out forwards`;
-            port_title.style.animation = scroll < 2100 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
+            title_name.style.animation = scroll < 3100 ? 'none' : `show_port  1s ease-in-out forwards`;
+            port_title.style.animation = scroll < 3050 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
             // contact 
-            if(scroll< 3300){
+            if(scroll< 3714){
                 resize_contact_0(contact,span_1,span_2)
             }else{
                 resize_contact(contact,span_1,span_2,local_adress,local_contact);
@@ -232,9 +261,8 @@ window.onload = () => {
     if(window.innerWidth >=750 && window.innerWidth <=1023){
         window.onscroll = () =>{
             let scroll = window.scrollY;
-         
-             console.log(scroll)
-            change_bg(scroll,500,1000,1600,2100,3364);
+            // console.log(scroll)
+            change_bg(scroll,650,1500,2140,3200,4264);
             /// about 
             about.style.animation = scroll < 170 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // edu 
@@ -248,7 +276,7 @@ window.onload = () => {
             // portfolio/
             title_name.style.animation = scroll <2683 ? `none`:` span_title_1 2s ease-in-out forwards`;
             // contact //////////
-            if(scroll< 3370){
+            if(scroll< 3970){
                 resize_contact_0(contact,span_1,span_2)
                
             }else{
@@ -260,9 +288,8 @@ window.onload = () => {
     if(window.innerWidth >=410 && window.innerWidth <=749){
         window.onscroll = () =>{
             let scroll = window.scrollY;
-
-             console.log(scroll)
-            change_bg(scroll,500,1000,1600,2100,3364);
+            // console.log(scroll)
+            change_bg(scroll,388,1650,2240,3200,4263);
             //////////// about 
             about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
             about_img.style.animation =  scroll < 297 ? `none` : `skill_title 1s ease-in-out 0.6s forwards`;
@@ -326,7 +353,9 @@ window.onload = () => {
                 },i*130)
             }
         },3100)
-
+       
+      
+        console.log(home_name.nextElementSibling)
     }
     show_name();
 }
