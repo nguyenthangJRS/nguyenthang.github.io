@@ -263,7 +263,7 @@ window.onload = () => {
 
             console.log(4);
              console.log(scroll)
-            change_bg(scroll,388,1650,2240,3200,4263);
+            change_bg(scroll,650,1100,1940,2500,3064);
             //////////// about 
             about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
             about_img.style.animation =  scroll < 297 ? `none` : `skill_title 1s ease-in-out 0.6s forwards`;
