@@ -177,7 +177,8 @@ window.onload = () => {
     if(window.innerWidth>=1500){
         window.onscroll = (e) =>{
             let scroll = window.scrollY;
-            //    console.log(scroll);
+            console.log(1);
+               console.log(scroll);
                change_bg(scroll,567,1536,2500,3474,4636);
             //////////// about 
             about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
