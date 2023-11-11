@@ -234,7 +234,7 @@ window.onload = () => {
             let scroll = window.scrollY;
          
              console.log(scroll)
-            change_bg(scroll,650,1500,2140,3200,4264);
+            change_bg(scroll,500,1000,1600,2100,3364);
             /// about 
             about.style.animation = scroll < 170 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // edu 
@@ -262,7 +262,7 @@ window.onload = () => {
             let scroll = window.scrollY;
 
              console.log(scroll)
-            change_bg(scroll,650,1100,1900,2500,3064);
+            change_bg(scroll,500,1000,1600,2100,3364);
             //////////// about 
             about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
             about_img.style.animation =  scroll < 297 ? `none` : `skill_title 1s ease-in-out 0.6s forwards`;
