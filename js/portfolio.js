@@ -207,7 +207,7 @@ window.onload = () => {
             // console.log(scroll)
             change_bg(scroll,650,1500,2140,3200,4264);
             //////////// about 
-            about.style.animation = scroll < 581 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // edu 
             edu.style.animation = scroll < 1357 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
             edu_title.style.animation = scroll < 1357 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
@@ -220,7 +220,7 @@ window.onload = () => {
             title_name.style.animation = scroll < 3100 ? 'none' : `show_port  1s ease-in-out forwards`;
             port_title.style.animation = scroll < 3050 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
             // contact 
-            if(scroll< 3714){
+            if(scroll< 3500){
                 resize_contact_0(contact,span_1,span_2)
             }else{
                 resize_contact(contact,span_1,span_2,local_adress,local_contact);
