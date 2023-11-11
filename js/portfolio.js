@@ -177,7 +177,7 @@ window.onload = () => {
     if(window.innerWidth>=1500){
         window.onscroll = (e) =>{
             let scroll = window.scrollY;
-            console.log("thang");
+            console.log(`1 : ${window.innerWidth}`);
                console.log(scroll);
                change_bg(scroll,500,1000,2300,2300,3364);
             //////////// about 
