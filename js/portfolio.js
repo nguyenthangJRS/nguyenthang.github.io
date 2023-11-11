@@ -208,20 +208,20 @@ window.onload = () => {
              console.log(scroll)
             change_bg(scroll,500,1000,1600,2100,3364);
             //////////// about 
-            about.style.animation = scroll < 400 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
+            about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // edu 
             edu.style.animation = scroll < 1000 ? 'none' : `port_title 1s ease-in-out 0.5s forwards`;
             edu_title.style.animation = scroll < 1000 ? 'none' : `show_title_edu  1s ease-in-out 0.5s forwards`;
             // skill 
-            skill_title.style.animation = scroll < 1700 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
+            skill_title.style.animation = scroll < 1600 ? 'none' : `skill_title 1.2s ease-in-out 0.4s forwards`;
             if(scroll>1800){
                 resize_skill_2(skill_items,skill_pacent,hyaku);
             }
             // portfolio/
-            title_name.style.animation = scroll < 2500 ? 'none' : `show_port  1s ease-in-out forwards`;
-            port_title.style.animation = scroll < 2500 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
+            title_name.style.animation = scroll < 2100 ? 'none' : `show_port  1s ease-in-out forwards`;
+            port_title.style.animation = scroll < 2100 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
             // contact 
-            if(scroll< 3000){
+            if(scroll< 3300){
                 resize_contact_0(contact,span_1,span_2)
             }else{
                 resize_contact(contact,span_1,span_2,local_adress,local_contact);
@@ -248,7 +248,7 @@ window.onload = () => {
             // portfolio/
             title_name.style.animation = scroll <2683 ? `none`:` span_title_1 2s ease-in-out forwards`;
             // contact //////////
-            if(scroll< 3970){
+            if(scroll< 3370){
                 resize_contact_0(contact,span_1,span_2)
                
             }else{
