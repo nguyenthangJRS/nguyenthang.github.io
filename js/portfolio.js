@@ -232,7 +232,7 @@ window.onload = () => {
     if(window.innerWidth >=750 && window.innerWidth <=1023){
         window.onscroll = () =>{
             let scroll = window.scrollY;
-            console.log(2);
+         
              console.log(scroll)
             change_bg(scroll,650,1500,2140,3200,4264);
             /// about 
@@ -261,9 +261,8 @@ window.onload = () => {
         window.onscroll = () =>{
             let scroll = window.scrollY;
 
-            console.log(4);
              console.log(scroll)
-            change_bg(scroll,650,1100,1940,2500,3064);
+            change_bg(scroll,650,1100,1900,2500,3064);
             //////////// about 
             about_title_phone.style.animation =  scroll < 131 ? `none` :  `work_img 1s ease-in-out 0.3s forwards`;
             about_img.style.animation =  scroll < 297 ? `none` : `skill_title 1s ease-in-out 0.6s forwards`;
