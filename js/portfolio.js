@@ -207,7 +207,7 @@ window.onload = () => {
             let scroll = window.scrollY;
             console.log(`1 : ${window.innerWidth}`);
                console.log(scroll);
-               change_bg(scroll,500,1000,2300,3364);
+               change_bg(scroll,500,1000,2100,2700,3500);
             //////////// about 
             about.style.animation = scroll > 500 && scroll <=1500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // skill 
