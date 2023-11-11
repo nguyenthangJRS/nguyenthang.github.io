@@ -179,7 +179,7 @@ window.onload = () => {
             let scroll = window.scrollY;
             console.log(1);
                console.log(scroll);
-               change_bg(scroll,500,1000,1600,2100,3364);
+               change_bg(scroll,500,1000,1900,2300,3364);
             //////////// about 
             about.style.animation = scroll < 500 ? 'none' : `show_title 1.5s ease-in-out 0.5s forwards`;
             // skill 
@@ -194,7 +194,7 @@ window.onload = () => {
             title_name.style.animation = scroll < 3700 ? 'none' : `show_port 1s ease-in-out forwards`;
             port_title.style.animation = scroll < 3050 ? 'none' : `port_title 1.3s ease-in-out 0.5s forwards`
             // contact 
-            if(scroll< 4450){
+            if(scroll< 3150){
                 resize_contact_0(contact,span_1,span_2)
             }else{
                 resize_contact(contact,span_1,span_2,local_adress,local_contact);
