@@ -71,6 +71,7 @@ html{
     box-sizing: border-box;
     body{
         position: relative;
+        overflow-y: hidden;
         .pointer{
             position: absolute;
             width: 200px;
